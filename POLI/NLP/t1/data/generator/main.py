@@ -15,8 +15,8 @@ def main():
     parser = argparse.ArgumentParser(description='Gerador de frases sintéticas para treinamento de NER')
     parser.add_argument('--amostras', type=int, default=1000, 
                         help='Número de frases a serem geradas')
-    parser.add_argument('--saida', type=str, default='../frases_sinteticas.jsonl',
-                        help='Caminho para arquivo de saída JSONL')
+    parser.add_argument('--saida', type=str, default='./frases_sinteticas.json',
+                        help='Caminho para arquivo de saída JSON')
     parser.add_argument('--taxa-erro', type=float, default=0.2,
                         help='Taxa de erro de digitação (0.0 a 1.0)')
     args = parser.parse_args()
@@ -34,14 +34,7 @@ def main():
     print("✓ Geração concluída!")
     print(f"✓ Arquivo salvo em: {args.saida}")
     
-    # Exibir algumas frases de exemplo
-    print("\nExemplos de frases geradas:")
-    for _ in range(5):
-        frase, entidades = gerador.gerar_frase()
-        print(f"\nFrase: \"{frase}\"")
-        print("Entidades identificadas:")
-        for ent in entidades:
-            print(f"  - {ent['tipo']}: \"{ent['entidade']}\" (modalidade: {ent['modalidade']})")
+
 
 if __name__ == "__main__":
     main() 
