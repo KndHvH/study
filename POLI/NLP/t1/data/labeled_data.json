@@ -1,0 +1,4481 @@
+[
+  {
+    "text": "o total é 50 reais com juros?",
+    "id": 1,
+    "entities": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "50 reais",
+        "labels": [
+          "VALOR"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 29,
+        "text": "com juros?",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "50 reais",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 29,
+        "text": "com juros?",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "50 reais",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 29,
+        "text": "com juros?",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "50 reais",
+        "labels": [
+          "incerto"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 29,
+        "text": "com juros?",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "50 reais",
+        "labels": [
+          "neutra"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 29,
+        "text": "com juros?",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 1,
+    "created_at": "2025-05-18T11:30:01.988676Z",
+    "updated_at": "2025-05-18T11:45:44.709420Z",
+    "lead_time": 190.522
+  },
+  {
+    "text": "meu salário foi reduzido, não consigo arar com isso",
+    "id": 2,
+    "entities": [
+      {
+        "start": 0,
+        "end": 24,
+        "text": "meu salário foi reduzido",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      },
+      {
+        "start": 26,
+        "end": 51,
+        "text": "não consigo arar com isso",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 24,
+        "text": "meu salário foi reduzido",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 26,
+        "end": 51,
+        "text": "não consigo arar com isso",
+        "labels": [
+          "negativa"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 24,
+        "text": "meu salário foi reduzido",
+        "labels": [
+          "condicional"
+        ]
+      },
+      {
+        "start": 26,
+        "end": 51,
+        "text": "não consigo arar com isso",
+        "labels": [
+          "negado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 24,
+        "text": "meu salário foi reduzido",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 26,
+        "end": 51,
+        "text": "não consigo arar com isso",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 24,
+        "text": "meu salário foi reduzido",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 26,
+        "end": 51,
+        "text": "não consigo arar com isso",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 2,
+    "created_at": "2025-05-18T11:40:14.928080Z",
+    "updated_at": "2025-05-18T11:46:05.202583Z",
+    "lead_time": 284.611
+  },
+  {
+    "text": "depois te envio o comprovante",
+    "id": 3,
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "text": "depois",
+        "labels": [
+          "TEMPO"
+        ]
+      },
+      {
+        "start": 18,
+        "end": 29,
+        "text": "comprovante",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 6,
+        "text": "depois",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 18,
+        "end": 29,
+        "text": "comprovante",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 6,
+        "text": "depois",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 18,
+        "end": 29,
+        "text": "comprovante",
+        "labels": [
+          "planejado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 6,
+        "text": "depois",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 18,
+        "end": 29,
+        "text": "comprovante",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 6,
+        "text": "depois",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 18,
+        "end": 29,
+        "text": "comprovante",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 3,
+    "created_at": "2025-05-18T11:42:33.744478Z",
+    "updated_at": "2025-05-18T11:42:33.744478Z",
+    "lead_time": 130.465
+  },
+  {
+    "text": "voocês aceitam parcelado em 3x?",
+    "id": 4,
+    "entities": [
+      {
+        "start": 7,
+        "end": 14,
+        "text": "aceitam",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 30,
+        "text": "parcelado em 3x",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 7,
+        "end": 14,
+        "text": "aceitam",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 30,
+        "text": "parcelado em 3x",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 7,
+        "end": 14,
+        "text": "aceitam",
+        "labels": [
+          "condicional"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 30,
+        "text": "parcelado em 3x",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 7,
+        "end": 14,
+        "text": "aceitam",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 30,
+        "text": "parcelado em 3x",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 7,
+        "end": 14,
+        "text": "aceitam",
+        "labels": [
+          "implicito"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 30,
+        "text": "parcelado em 3x",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 4,
+    "created_at": "2025-05-18T11:43:45.690483Z",
+    "updated_at": "2025-05-18T11:43:45.690483Z",
+    "lead_time": 68.719
+  },
+  {
+    "text": "tem programa de renegociação?",
+    "id": 5,
+    "entities": [
+      {
+        "start": 4,
+        "end": 28,
+        "text": "programa de renegociação",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 4,
+        "end": 28,
+        "text": "programa de renegociação",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 4,
+        "end": 28,
+        "text": "programa de renegociação",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 4,
+        "end": 28,
+        "text": "programa de renegociação",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 4,
+        "end": 28,
+        "text": "programa de renegociação",
+        "labels": [
+          "implicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 5,
+    "created_at": "2025-05-18T11:45:10.388265Z",
+    "updated_at": "2025-05-18T11:45:10.388265Z",
+    "lead_time": 82.178
+  },
+  {
+    "text": "pode me enviar o código do banco digital?",
+    "id": 6,
+    "entities": [
+      {
+        "start": 17,
+        "end": 40,
+        "text": "código do banco digital",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 17,
+        "end": 40,
+        "text": "código do banco digital",
+        "labels": [
+          "neutra"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 17,
+        "end": 40,
+        "text": "código do banco digital",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 17,
+        "end": 40,
+        "text": "código do banco digital",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 17,
+        "end": 40,
+        "text": "código do banco digital",
+        "labels": [
+          "implicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 6,
+    "created_at": "2025-05-18T11:47:34.216098Z",
+    "updated_at": "2025-05-18T11:47:34.216098Z",
+    "lead_time": 63.122
+  },
+  {
+    "text": "não tenho coomo pagar agora, apenas se sobrar dinheiro",
+    "id": 7,
+    "entities": [
+      {
+        "start": 0,
+        "end": 27,
+        "text": "não tenho coomo pagar agora",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 29,
+        "end": 54,
+        "text": "apenas se sobrar dinheiro",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 27,
+        "text": "não tenho coomo pagar agora",
+        "labels": [
+          "negativa"
+        ]
+      },
+      {
+        "start": 29,
+        "end": 54,
+        "text": "apenas se sobrar dinheiro",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 27,
+        "text": "não tenho coomo pagar agora",
+        "labels": [
+          "negado"
+        ]
+      },
+      {
+        "start": 29,
+        "end": 54,
+        "text": "apenas se sobrar dinheiro",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 27,
+        "text": "não tenho coomo pagar agora",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 29,
+        "end": 54,
+        "text": "apenas se sobrar dinheiro",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 27,
+        "text": "não tenho coomo pagar agora",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 29,
+        "end": 54,
+        "text": "apenas se sobrar dinheiro",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 7,
+    "created_at": "2025-05-18T11:48:28.090582Z",
+    "updated_at": "2025-05-18T11:48:28.090582Z",
+    "lead_time": 50.684
+  },
+  {
+    "text": "quando meu salário cair consigo pagar 2.750 reas",
+    "id": 8,
+    "entities": [
+      {
+        "start": 0,
+        "end": 23,
+        "text": "quando meu salário cair",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      },
+      {
+        "start": 24,
+        "end": 37,
+        "text": "consigo pagar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 38,
+        "end": 48,
+        "text": "2.750 reas",
+        "labels": [
+          "VALOR"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 23,
+        "text": "quando meu salário cair",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 24,
+        "end": 37,
+        "text": "consigo pagar",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 38,
+        "end": 48,
+        "text": "2.750 reas",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 23,
+        "text": "quando meu salário cair",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 24,
+        "end": 37,
+        "text": "consigo pagar",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 38,
+        "end": 48,
+        "text": "2.750 reas",
+        "labels": [
+          "planejado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 23,
+        "text": "quando meu salário cair",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 24,
+        "end": 37,
+        "text": "consigo pagar",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 38,
+        "end": 48,
+        "text": "2.750 reas",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 23,
+        "text": "quando meu salário cair",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 24,
+        "end": 37,
+        "text": "consigo pagar",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 38,
+        "end": 48,
+        "text": "2.750 reas",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 8,
+    "created_at": "2025-05-18T11:50:29.287249Z",
+    "updated_at": "2025-05-18T11:50:29.287249Z",
+    "lead_time": 105.388
+  },
+  {
+    "text": "conseui juntar 800 reeais pra pagar amanhã",
+    "id": 9,
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "text": "conseui juntar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 25,
+        "text": "800 reeais",
+        "labels": [
+          "VALOR"
+        ]
+      },
+      {
+        "start": 36,
+        "end": 42,
+        "text": "amanhã",
+        "labels": [
+          "TEMPO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 14,
+        "text": "conseui juntar",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 25,
+        "text": "800 reeais",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 36,
+        "end": 42,
+        "text": "amanhã",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 14,
+        "text": "conseui juntar",
+        "labels": [
+          "afirmado"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 25,
+        "text": "800 reeais",
+        "labels": [
+          "afirmado"
+        ]
+      },
+      {
+        "start": 36,
+        "end": 42,
+        "text": "amanhã",
+        "labels": [
+          "planejado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 14,
+        "text": "conseui juntar",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 25,
+        "text": "800 reeais",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 36,
+        "end": 42,
+        "text": "amanhã",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 14,
+        "text": "conseui juntar",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 15,
+        "end": 25,
+        "text": "800 reeais",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 36,
+        "end": 42,
+        "text": "amanhã",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 9,
+    "created_at": "2025-05-18T11:57:48.798037Z",
+    "updated_at": "2025-05-18T11:57:48.798037Z",
+    "lead_time": 82.903
+  },
+  {
+    "text": "vou fazer o boleto agora",
+    "id": 10,
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "text": "boleto",
+        "labels": [
+          "FORMA_PAGAMENTO"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 24,
+        "text": "agora",
+        "labels": [
+          "TEMPO"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 9,
+        "text": "vou fazer",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 12,
+        "end": 18,
+        "text": "boleto",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 24,
+        "text": "agora",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 9,
+        "text": "vou fazer",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 12,
+        "end": 18,
+        "text": "boleto",
+        "labels": [
+          "afirmado"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 24,
+        "text": "agora",
+        "labels": [
+          "afirmado"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 9,
+        "text": "vou fazer",
+        "labels": [
+          "afirmado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 12,
+        "end": 18,
+        "text": "boleto",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 24,
+        "text": "agora",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 9,
+        "text": "vou fazer",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 12,
+        "end": 18,
+        "text": "boleto",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 24,
+        "text": "agora",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 9,
+        "text": "vou fazer",
+        "labels": [
+          "implicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 10,
+    "created_at": "2025-05-18T12:02:23.295151Z",
+    "updated_at": "2025-05-18T12:26:00.054477Z",
+    "lead_time": 314.422
+  },
+  {
+    "text": "ficou 300 reais redondo",
+    "id": 11,
+    "entities": [
+      {
+        "start": 6,
+        "end": 15,
+        "text": "300 reais",
+        "labels": [
+          "VALOR"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 6,
+        "end": 15,
+        "text": "300 reais",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 6,
+        "end": 15,
+        "text": "300 reais",
+        "labels": [
+          "incerto"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 6,
+        "end": 15,
+        "text": "300 reais",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 6,
+        "end": 15,
+        "text": "300 reais",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 11,
+    "created_at": "2025-05-18T12:03:08.620416Z",
+    "updated_at": "2025-05-18T12:03:08.620416Z",
+    "lead_time": 43.083
+  },
+  {
+    "text": "não dá pra quitar com desocnto?",
+    "id": 12,
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "text": "quitar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 22,
+        "end": 30,
+        "text": "desocnto",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 11,
+        "end": 17,
+        "text": "quitar",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 22,
+        "end": 30,
+        "text": "desocnto",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 11,
+        "end": 17,
+        "text": "quitar",
+        "labels": [
+          "condicional"
+        ]
+      },
+      {
+        "start": 22,
+        "end": 30,
+        "text": "desocnto",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 11,
+        "end": 17,
+        "text": "quitar",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 22,
+        "end": 30,
+        "text": "desocnto",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 11,
+        "end": 17,
+        "text": "quitar",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 22,
+        "end": 30,
+        "text": "desocnto",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 12,
+    "created_at": "2025-05-18T12:03:48.947730Z",
+    "updated_at": "2025-05-18T12:03:48.947730Z",
+    "lead_time": 38.449
+  },
+  {
+    "text": "não to conseguindo nem pagar as contas básicas",
+    "id": 13,
+    "entities": [
+      {
+        "start": 23,
+        "end": 28,
+        "text": "pagar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 23,
+        "end": 28,
+        "text": "pagar",
+        "labels": [
+          "negativa"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 23,
+        "end": 28,
+        "text": "pagar",
+        "labels": [
+          "negado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 23,
+        "end": 28,
+        "text": "pagar",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 23,
+        "end": 28,
+        "text": "pagar",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 13,
+    "created_at": "2025-05-18T12:04:37.969716Z",
+    "updated_at": "2025-05-18T12:26:48.257270Z",
+    "lead_time": 88.438
+  },
+  {
+    "text": "vou fazer o transferência agora",
+    "id": 14,
+    "entities": [
+      {
+        "start": 26,
+        "end": 31,
+        "text": "agora",
+        "labels": [
+          "TEMPO"
+        ]
+      },
+      {
+        "start": 12,
+        "end": 25,
+        "text": "transferência",
+        "labels": [
+          "FORMA_PAGAMENTO"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 25,
+        "text": "vou fazer o transferência",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 26,
+        "end": 31,
+        "text": "agora",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 12,
+        "end": 25,
+        "text": "transferência",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 25,
+        "text": "vou fazer o transferência",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 26,
+        "end": 31,
+        "text": "agora",
+        "labels": [
+          "afirmado"
+        ]
+      },
+      {
+        "start": 12,
+        "end": 25,
+        "text": "transferência",
+        "labels": [
+          "afirmado"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 25,
+        "text": "vou fazer o transferência",
+        "labels": [
+          "afirmado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 26,
+        "end": 31,
+        "text": "agora",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 12,
+        "end": 25,
+        "text": "transferência",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 25,
+        "text": "vou fazer o transferência",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 26,
+        "end": 31,
+        "text": "agora",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 12,
+        "end": 25,
+        "text": "transferência",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 25,
+        "text": "vou fazer o transferência",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 14,
+    "created_at": "2025-05-18T12:06:09.888963Z",
+    "updated_at": "2025-05-18T12:06:09.889987Z",
+    "lead_time": 53.494
+  },
+  {
+    "text": "comproometo a pagar essa semana",
+    "id": 15,
+    "entities": [
+      {
+        "start": 20,
+        "end": 31,
+        "text": "essa semana",
+        "labels": [
+          "TEMPO"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 19,
+        "text": "comproometo a pagar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 20,
+        "end": 31,
+        "text": "essa semana",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 19,
+        "text": "comproometo a pagar",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 20,
+        "end": 31,
+        "text": "essa semana",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 19,
+        "text": "comproometo a pagar",
+        "labels": [
+          "planejado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 20,
+        "end": 31,
+        "text": "essa semana",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 19,
+        "text": "comproometo a pagar",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 20,
+        "end": 31,
+        "text": "essa semana",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 19,
+        "text": "comproometo a pagar",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 15,
+    "created_at": "2025-05-18T12:06:43.256920Z",
+    "updated_at": "2025-05-18T12:06:43.256920Z",
+    "lead_time": 31.327
+  },
+  {
+    "text": "o totl é 500 com juros?",
+    "id": 16,
+    "entities": [
+      {
+        "start": 9,
+        "end": 12,
+        "text": "500",
+        "labels": [
+          "VALOR"
+        ]
+      },
+      {
+        "start": 13,
+        "end": 22,
+        "text": "com juros",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 9,
+        "end": 12,
+        "text": "500",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 13,
+        "end": 22,
+        "text": "com juros",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 9,
+        "end": 12,
+        "text": "500",
+        "labels": [
+          "incerto"
+        ]
+      },
+      {
+        "start": 13,
+        "end": 22,
+        "text": "com juros",
+        "labels": [
+          "incerto"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 9,
+        "end": 12,
+        "text": "500",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 13,
+        "end": 22,
+        "text": "com juros",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 9,
+        "end": 12,
+        "text": "500",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 13,
+        "end": 22,
+        "text": "com juros",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 16,
+    "created_at": "2025-05-18T12:07:20.204024Z",
+    "updated_at": "2025-05-18T12:07:20.204024Z",
+    "lead_time": 35.272
+  },
+  {
+    "text": "quando receber o adiantamento mando o valor",
+    "id": 17,
+    "entities": [
+      {
+        "start": 0,
+        "end": 29,
+        "text": "quando receber o adiantamento",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      },
+      {
+        "start": 30,
+        "end": 43,
+        "text": "mando o valor",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 29,
+        "text": "quando receber o adiantamento",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 30,
+        "end": 43,
+        "text": "mando o valor",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 29,
+        "text": "quando receber o adiantamento",
+        "labels": [
+          "condicional"
+        ]
+      },
+      {
+        "start": 30,
+        "end": 43,
+        "text": "mando o valor",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 29,
+        "text": "quando receber o adiantamento",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 30,
+        "end": 43,
+        "text": "mando o valor",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 29,
+        "text": "quando receber o adiantamento",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 30,
+        "end": 43,
+        "text": "mando o valor",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 17,
+    "created_at": "2025-05-18T12:08:06.010824Z",
+    "updated_at": "2025-05-18T12:08:06.010824Z",
+    "lead_time": 43.326
+  },
+  {
+    "text": "não tenho como pagar agora",
+    "id": 18,
+    "entities": [
+      {
+        "start": 0,
+        "end": 20,
+        "text": "não tenho como pagar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 21,
+        "end": 26,
+        "text": "agora",
+        "labels": [
+          "TEMPO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 20,
+        "text": "não tenho como pagar",
+        "labels": [
+          "negativa"
+        ]
+      },
+      {
+        "start": 21,
+        "end": 26,
+        "text": "agora",
+        "labels": [
+          "negativa"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 20,
+        "text": "não tenho como pagar",
+        "labels": [
+          "negado"
+        ]
+      },
+      {
+        "start": 21,
+        "end": 26,
+        "text": "agora",
+        "labels": [
+          "negado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 20,
+        "text": "não tenho como pagar",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 21,
+        "end": 26,
+        "text": "agora",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 20,
+        "text": "não tenho como pagar",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 21,
+        "end": 26,
+        "text": "agora",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 18,
+    "created_at": "2025-05-18T12:08:40.780963Z",
+    "updated_at": "2025-05-18T12:08:40.780963Z",
+    "lead_time": 32.742
+  },
+  {
+    "text": "fiz o pagamento, vou mandar o recibo",
+    "id": 19,
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "fiz o pagamento",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "fiz o pagamento",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "fiz o pagamento",
+        "labels": [
+          "afirmado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "fiz o pagamento",
+        "labels": [
+          "passado"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "fiz o pagamento",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 19,
+    "created_at": "2025-05-18T12:09:12.122923Z",
+    "updated_at": "2025-05-18T12:09:12.122923Z",
+    "lead_time": 29.547
+  },
+  {
+    "text": "consegue faer um valor menor?",
+    "id": 20,
+    "entities": [
+      {
+        "start": 17,
+        "end": 28,
+        "text": "valor menor",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 17,
+        "end": 28,
+        "text": "valor menor",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 17,
+        "end": 28,
+        "text": "valor menor",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 17,
+        "end": 28,
+        "text": "valor menor",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 17,
+        "end": 28,
+        "text": "valor menor",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 20,
+    "created_at": "2025-05-18T12:10:04.137856Z",
+    "updated_at": "2025-05-18T12:10:04.137856Z",
+    "lead_time": 50.389
+  },
+  {
+    "text": "não tem como dar um desconto maaior?",
+    "id": 21,
+    "entities": [
+      {
+        "start": 20,
+        "end": 35,
+        "text": "desconto maaior",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 20,
+        "end": 35,
+        "text": "desconto maaior",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 20,
+        "end": 35,
+        "text": "desconto maaior",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 20,
+        "end": 35,
+        "text": "desconto maaior",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 20,
+        "end": 35,
+        "text": "desconto maaior",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 21,
+    "created_at": "2025-05-18T12:32:24.239628Z",
+    "updated_at": "2025-05-18T12:32:24.239628Z",
+    "lead_time": 16.235
+  },
+  {
+    "text": "confirmando se é 750 reais mesmo",
+    "id": 22,
+    "entities": [
+      {
+        "start": 17,
+        "end": 26,
+        "text": "750 reais",
+        "labels": [
+          "VALOR"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 17,
+        "end": 26,
+        "text": "750 reais",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 17,
+        "end": 26,
+        "text": "750 reais",
+        "labels": [
+          "incerto"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 17,
+        "end": 26,
+        "text": "750 reais",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 17,
+        "end": 26,
+        "text": "750 reais",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 22,
+    "created_at": "2025-05-18T12:32:37.580166Z",
+    "updated_at": "2025-05-18T12:32:37.580166Z",
+    "lead_time": 12.891
+  },
+  {
+    "text": "me dá até na hora do almoço",
+    "id": 23,
+    "entities": [
+      {
+        "start": 13,
+        "end": 27,
+        "text": "hora do almoço",
+        "labels": [
+          "TEMPO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 13,
+        "end": 27,
+        "text": "hora do almoço",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 13,
+        "end": 27,
+        "text": "hora do almoço",
+        "labels": [
+          "planejado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 13,
+        "end": 27,
+        "text": "hora do almoço",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 13,
+        "end": 27,
+        "text": "hora do almoço",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 23,
+    "created_at": "2025-05-18T12:32:53.552581Z",
+    "updated_at": "2025-05-18T12:32:53.552581Z",
+    "lead_time": 15.237
+  },
+  {
+    "text": "já é trezentos com os juros?",
+    "id": 24,
+    "entities": [
+      {
+        "start": 5,
+        "end": 14,
+        "text": "trezentos",
+        "labels": [
+          "VALOR"
+        ]
+      },
+      {
+        "start": 22,
+        "end": 27,
+        "text": "juros",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 5,
+        "end": 14,
+        "text": "trezentos",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 22,
+        "end": 27,
+        "text": "juros",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 5,
+        "end": 14,
+        "text": "trezentos",
+        "labels": [
+          "incerto"
+        ]
+      },
+      {
+        "start": 22,
+        "end": 27,
+        "text": "juros",
+        "labels": [
+          "incerto"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 5,
+        "end": 14,
+        "text": "trezentos",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 22,
+        "end": 27,
+        "text": "juros",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 5,
+        "end": 14,
+        "text": "trezentos",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 22,
+        "end": 27,
+        "text": "juros",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 24,
+    "created_at": "2025-05-18T12:33:25.170144Z",
+    "updated_at": "2025-05-18T12:33:25.170144Z",
+    "lead_time": 31.166
+  },
+  {
+    "text": "tem programa de renegociação?",
+    "id": 25,
+    "entities": [
+      {
+        "start": 0,
+        "end": 29,
+        "text": "tem programa de renegociação?",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 29,
+        "text": "tem programa de renegociação?",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 29,
+        "text": "tem programa de renegociação?",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 29,
+        "text": "tem programa de renegociação?",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 29,
+        "text": "tem programa de renegociação?",
+        "labels": [
+          "implicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 25,
+    "created_at": "2025-05-18T12:33:59.559365Z",
+    "updated_at": "2025-05-18T12:33:59.559365Z",
+    "lead_time": 33.879
+  },
+  {
+    "text": "tá batedo R$ 1.111,11 no final",
+    "id": 26,
+    "entities": [
+      {
+        "start": 10,
+        "end": 21,
+        "text": "R$ 1.111,11",
+        "labels": [
+          "VALOR"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 10,
+        "end": 21,
+        "text": "R$ 1.111,11",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 10,
+        "end": 21,
+        "text": "R$ 1.111,11",
+        "labels": [
+          "incerto"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 10,
+        "end": 21,
+        "text": "R$ 1.111,11",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 10,
+        "end": 21,
+        "text": "R$ 1.111,11",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 26,
+    "created_at": "2025-05-18T12:34:21.208410Z",
+    "updated_at": "2025-05-18T12:34:21.208410Z",
+    "lead_time": 21.203
+  },
+  {
+    "text": "já sparei 15 reais pra pagar",
+    "id": 27,
+    "entities": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "15 reais",
+        "labels": [
+          "VALOR"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 9,
+        "text": "já sparei",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "15 reais",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 9,
+        "text": "já sparei",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "15 reais",
+        "labels": [
+          "afirmado"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 9,
+        "text": "já sparei",
+        "labels": [
+          "afirmado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "15 reais",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 9,
+        "text": "já sparei",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 10,
+        "end": 18,
+        "text": "15 reais",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 9,
+        "text": "já sparei",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 27,
+    "created_at": "2025-05-18T12:34:55.242618Z",
+    "updated_at": "2025-05-18T12:34:55.242618Z",
+    "lead_time": 33.506
+  },
+  {
+    "text": "to com outro problema finaanceiro urgente",
+    "id": 28,
+    "entities": [
+      {
+        "start": 0,
+        "end": 41,
+        "text": "to com outro problema finaanceiro urgente",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 41,
+        "text": "to com outro problema finaanceiro urgente",
+        "labels": [
+          "negativa"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 41,
+        "text": "to com outro problema finaanceiro urgente",
+        "labels": [
+          "negado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 41,
+        "text": "to com outro problema finaanceiro urgente",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 41,
+        "text": "to com outro problema finaanceiro urgente",
+        "labels": [
+          "implicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 28,
+    "created_at": "2025-05-18T12:35:28.258633Z",
+    "updated_at": "2025-05-18T12:35:28.258633Z",
+    "lead_time": 30.856
+  },
+  {
+    "text": "to sem dinheiro até quando eu reecber",
+    "id": 29,
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "to sem dinheiro",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 16,
+        "end": 37,
+        "text": "até quando eu reecber",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "to sem dinheiro",
+        "labels": [
+          "negativa"
+        ]
+      },
+      {
+        "start": 16,
+        "end": 37,
+        "text": "até quando eu reecber",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "to sem dinheiro",
+        "labels": [
+          "negado"
+        ]
+      },
+      {
+        "start": 16,
+        "end": 37,
+        "text": "até quando eu reecber",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "to sem dinheiro",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 16,
+        "end": 37,
+        "text": "até quando eu reecber",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "to sem dinheiro",
+        "labels": [
+          "implicito"
+        ]
+      },
+      {
+        "start": 16,
+        "end": 37,
+        "text": "até quando eu reecber",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 29,
+    "created_at": "2025-05-18T12:35:58.988549Z",
+    "updated_at": "2025-05-18T12:35:58.988549Z",
+    "lead_time": 30.198
+  },
+  {
+    "text": "acabei de pagar, já envio o comprovante",
+    "id": 30,
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "acabei de pagar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "acabei de pagar",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "acabei de pagar",
+        "labels": [
+          "afirmado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "acabei de pagar",
+        "labels": [
+          "passado"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 15,
+        "text": "acabei de pagar",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 30,
+    "created_at": "2025-05-18T12:36:10.631743Z",
+    "updated_at": "2025-05-18T12:36:10.631743Z",
+    "lead_time": 11.165
+  },
+  {
+    "text": "ficou R$ 742,15 redondo",
+    "id": 31,
+    "entities": [
+      {
+        "start": 6,
+        "end": 15,
+        "text": "R$ 742,15",
+        "labels": [
+          "VALOR"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 6,
+        "end": 15,
+        "text": "R$ 742,15",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 6,
+        "end": 15,
+        "text": "R$ 742,15",
+        "labels": [
+          "incerto"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 6,
+        "end": 15,
+        "text": "R$ 742,15",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 6,
+        "end": 15,
+        "text": "R$ 742,15",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 31,
+    "created_at": "2025-05-18T12:36:26.812081Z",
+    "updated_at": "2025-05-18T12:36:26.812081Z",
+    "lead_time": 15.718
+  },
+  {
+    "text": "esse mês estourou o orçamento",
+    "id": 33,
+    "annotator": 1,
+    "annotation_id": 33,
+    "created_at": "2025-05-18T12:36:50.026001Z",
+    "updated_at": "2025-05-18T12:36:50.026001Z",
+    "lead_time": 17.092
+  },
+  {
+    "text": "assim que cair, te aviso",
+    "id": 34,
+    "entities": [
+      {
+        "start": 16,
+        "end": 24,
+        "text": "te aviso",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 14,
+        "text": "assim que cair",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 16,
+        "end": 24,
+        "text": "te aviso",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 14,
+        "text": "assim que cair",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 16,
+        "end": 24,
+        "text": "te aviso",
+        "labels": [
+          "condicional"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 14,
+        "text": "assim que cair",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 16,
+        "end": 24,
+        "text": "te aviso",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 14,
+        "text": "assim que cair",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 16,
+        "end": 24,
+        "text": "te aviso",
+        "labels": [
+          "implicito"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 14,
+        "text": "assim que cair",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 34,
+    "created_at": "2025-05-18T12:37:37.677528Z",
+    "updated_at": "2025-05-18T12:37:37.677528Z",
+    "lead_time": 47.197
+  },
+  {
+    "text": "se eu vender pgo tudo",
+    "id": 35,
+    "entities": [
+      {
+        "start": 13,
+        "end": 21,
+        "text": "pgo tudo",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 12,
+        "text": "se eu vender",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 13,
+        "end": 21,
+        "text": "pgo tudo",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 12,
+        "text": "se eu vender",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 13,
+        "end": 21,
+        "text": "pgo tudo",
+        "labels": [
+          "condicional"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 12,
+        "text": "se eu vender",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 13,
+        "end": 21,
+        "text": "pgo tudo",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 12,
+        "text": "se eu vender",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 13,
+        "end": 21,
+        "text": "pgo tudo",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 12,
+        "text": "se eu vender",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 35,
+    "created_at": "2025-05-18T12:38:06.575540Z",
+    "updated_at": "2025-05-18T12:38:06.575540Z",
+    "lead_time": 28.387
+  },
+  {
+    "text": "esse mês estourou o orçamento",
+    "id": 36,
+    "entities": [
+      {
+        "start": 9,
+        "end": 29,
+        "text": "estourou o orçamento",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 8,
+        "text": "esse mês",
+        "labels": [
+          "TEMPO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 9,
+        "end": 29,
+        "text": "estourou o orçamento",
+        "labels": [
+          "negativa"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 8,
+        "text": "esse mês",
+        "labels": [
+          "negativa"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 9,
+        "end": 29,
+        "text": "estourou o orçamento",
+        "labels": [
+          "negado"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 8,
+        "text": "esse mês",
+        "labels": [
+          "negado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 9,
+        "end": 29,
+        "text": "estourou o orçamento",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 8,
+        "text": "esse mês",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 9,
+        "end": 29,
+        "text": "estourou o orçamento",
+        "labels": [
+          "implicito"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 8,
+        "text": "esse mês",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 36,
+    "created_at": "2025-05-18T12:38:39.735429Z",
+    "updated_at": "2025-05-18T12:38:39.735429Z",
+    "lead_time": 32.67
+  },
+  {
+    "text": "quando sair meu pagamento mando o valor",
+    "id": 38,
+    "entities": [
+      {
+        "start": 26,
+        "end": 39,
+        "text": "mando o valor",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 25,
+        "text": "quando sair meu pagamento",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 26,
+        "end": 39,
+        "text": "mando o valor",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 25,
+        "text": "quando sair meu pagamento",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 26,
+        "end": 39,
+        "text": "mando o valor",
+        "labels": [
+          "condicional"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 25,
+        "text": "quando sair meu pagamento",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 26,
+        "end": 39,
+        "text": "mando o valor",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 25,
+        "text": "quando sair meu pagamento",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 26,
+        "end": 39,
+        "text": "mando o valor",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 25,
+        "text": "quando sair meu pagamento",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 38,
+    "created_at": "2025-05-18T12:39:32.683644Z",
+    "updated_at": "2025-05-18T12:39:32.683644Z",
+    "lead_time": 45.654
+  },
+  {
+    "text": "vou fazer R$ 57,34 dinheiro depois do almoco",
+    "id": 39,
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "text": "vou fazer",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 10,
+        "end": 18,
+        "text": "R$ 57,34",
+        "labels": [
+          "VALOR"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 27,
+        "text": "dinheiro",
+        "labels": [
+          "FORMA_PAGAMENTO"
+        ]
+      },
+      {
+        "start": 28,
+        "end": 44,
+        "text": "depois do almoco",
+        "labels": [
+          "TEMPO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 9,
+        "text": "vou fazer",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 10,
+        "end": 18,
+        "text": "R$ 57,34",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 27,
+        "text": "dinheiro",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 28,
+        "end": 44,
+        "text": "depois do almoco",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 9,
+        "text": "vou fazer",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 10,
+        "end": 18,
+        "text": "R$ 57,34",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 27,
+        "text": "dinheiro",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 28,
+        "end": 44,
+        "text": "depois do almoco",
+        "labels": [
+          "planejado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 9,
+        "text": "vou fazer",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 10,
+        "end": 18,
+        "text": "R$ 57,34",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 27,
+        "text": "dinheiro",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 28,
+        "end": 44,
+        "text": "depois do almoco",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 9,
+        "text": "vou fazer",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 10,
+        "end": 18,
+        "text": "R$ 57,34",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 27,
+        "text": "dinheiro",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 28,
+        "end": 44,
+        "text": "depois do almoco",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 39,
+    "created_at": "2025-05-18T12:40:25.917362Z",
+    "updated_at": "2025-05-18T12:40:25.917362Z",
+    "lead_time": 52.722
+  },
+  {
+    "text": "só posso pagar 50% agora",
+    "id": 40,
+    "entities": [
+      {
+        "start": 15,
+        "end": 18,
+        "text": "50%",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 24,
+        "text": "agora",
+        "labels": [
+          "TEMPO"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 14,
+        "text": "só posso pagar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 15,
+        "end": 18,
+        "text": "50%",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 24,
+        "text": "agora",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 14,
+        "text": "só posso pagar",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 15,
+        "end": 18,
+        "text": "50%",
+        "labels": [
+          "condicional"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 24,
+        "text": "agora",
+        "labels": [
+          "condicional"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 14,
+        "text": "só posso pagar",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 15,
+        "end": 18,
+        "text": "50%",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 24,
+        "text": "agora",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 14,
+        "text": "só posso pagar",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 15,
+        "end": 18,
+        "text": "50%",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 24,
+        "text": "agora",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 14,
+        "text": "só posso pagar",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 40,
+    "created_at": "2025-05-18T12:41:05.148490Z",
+    "updated_at": "2025-05-18T12:41:05.148490Z",
+    "lead_time": 38.713
+  },
+  {
+    "text": "são R$ 1.75,00 no total?",
+    "id": 41,
+    "entities": [
+      {
+        "start": 4,
+        "end": 14,
+        "text": "R$ 1.75,00",
+        "labels": [
+          "VALOR"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 4,
+        "end": 14,
+        "text": "R$ 1.75,00",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 4,
+        "end": 14,
+        "text": "R$ 1.75,00",
+        "labels": [
+          "incerto"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 4,
+        "end": 14,
+        "text": "R$ 1.75,00",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 4,
+        "end": 14,
+        "text": "R$ 1.75,00",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 41,
+    "created_at": "2025-05-18T12:41:21.955493Z",
+    "updated_at": "2025-05-18T12:41:21.955493Z",
+    "lead_time": 16.312
+  },
+  {
+    "text": "to com 600 reais pra paar",
+    "id": 42,
+    "entities": [
+      {
+        "start": 7,
+        "end": 16,
+        "text": "600 reais",
+        "labels": [
+          "VALOR"
+        ]
+      },
+      {
+        "start": 17,
+        "end": 25,
+        "text": "pra paar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 7,
+        "end": 16,
+        "text": "600 reais",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 17,
+        "end": 25,
+        "text": "pra paar",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 7,
+        "end": 16,
+        "text": "600 reais",
+        "labels": [
+          "afirmado"
+        ]
+      },
+      {
+        "start": 17,
+        "end": 25,
+        "text": "pra paar",
+        "labels": [
+          "afirmado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 7,
+        "end": 16,
+        "text": "600 reais",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 17,
+        "end": 25,
+        "text": "pra paar",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 7,
+        "end": 16,
+        "text": "600 reais",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 17,
+        "end": 25,
+        "text": "pra paar",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 42,
+    "created_at": "2025-05-18T12:41:40.010998Z",
+    "updated_at": "2025-05-18T12:41:40.010998Z",
+    "lead_time": 17.591
+  },
+  {
+    "text": "to com outro prroblema financeiro urgente",
+    "id": 43,
+    "entities": [
+      {
+        "start": 0,
+        "end": 41,
+        "text": "to com outro prroblema financeiro urgente",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 41,
+        "text": "to com outro prroblema financeiro urgente",
+        "labels": [
+          "negativa"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 41,
+        "text": "to com outro prroblema financeiro urgente",
+        "labels": [
+          "negado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 41,
+        "text": "to com outro prroblema financeiro urgente",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 41,
+        "text": "to com outro prroblema financeiro urgente",
+        "labels": [
+          "implicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 43,
+    "created_at": "2025-05-18T12:42:01.350700Z",
+    "updated_at": "2025-05-18T12:42:01.350700Z",
+    "lead_time": 20.825
+  },
+  {
+    "text": "consigo pagar cinco mil em 30 dias",
+    "id": 44,
+    "entities": [
+      {
+        "start": 14,
+        "end": 23,
+        "text": "cinco mil",
+        "labels": [
+          "VALOR"
+        ]
+      },
+      {
+        "start": 27,
+        "end": 34,
+        "text": "30 dias",
+        "labels": [
+          "TEMPO"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 13,
+        "text": "consigo pagar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 14,
+        "end": 23,
+        "text": "cinco mil",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 27,
+        "end": 34,
+        "text": "30 dias",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 13,
+        "text": "consigo pagar",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 14,
+        "end": 23,
+        "text": "cinco mil",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 27,
+        "end": 34,
+        "text": "30 dias",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 13,
+        "text": "consigo pagar",
+        "labels": [
+          "planejado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 14,
+        "end": 23,
+        "text": "cinco mil",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 27,
+        "end": 34,
+        "text": "30 dias",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 13,
+        "text": "consigo pagar",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 14,
+        "end": 23,
+        "text": "cinco mil",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 27,
+        "end": 34,
+        "text": "30 dias",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 13,
+        "text": "consigo pagar",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 44,
+    "created_at": "2025-05-18T12:42:59.517914Z",
+    "updated_at": "2025-05-18T12:42:59.517914Z",
+    "lead_time": 57.693
+  },
+  {
+    "text": "dá pra fazer no transferência?",
+    "id": 45,
+    "entities": [
+      {
+        "start": 16,
+        "end": 29,
+        "text": "transferência",
+        "labels": [
+          "FORMA_PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 16,
+        "end": 29,
+        "text": "transferência",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 16,
+        "end": 29,
+        "text": "transferência",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 16,
+        "end": 29,
+        "text": "transferência",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 16,
+        "end": 29,
+        "text": "transferência",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 45,
+    "created_at": "2025-05-18T12:43:29.347234Z",
+    "updated_at": "2025-05-18T12:43:29.347234Z",
+    "lead_time": 29.293
+  },
+  {
+    "text": "já é 2500 reais com os juros?",
+    "id": 46,
+    "entities": [
+      {
+        "start": 5,
+        "end": 15,
+        "text": "2500 reais",
+        "labels": [
+          "VALOR"
+        ]
+      },
+      {
+        "start": 23,
+        "end": 28,
+        "text": "juros",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 5,
+        "end": 15,
+        "text": "2500 reais",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 23,
+        "end": 28,
+        "text": "juros",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 5,
+        "end": 15,
+        "text": "2500 reais",
+        "labels": [
+          "incerto"
+        ]
+      },
+      {
+        "start": 23,
+        "end": 28,
+        "text": "juros",
+        "labels": [
+          "incerto"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 5,
+        "end": 15,
+        "text": "2500 reais",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 23,
+        "end": 28,
+        "text": "juros",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 5,
+        "end": 15,
+        "text": "2500 reais",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 23,
+        "end": 28,
+        "text": "juros",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 46,
+    "created_at": "2025-05-18T12:43:52.290520Z",
+    "updated_at": "2025-05-18T12:43:52.290520Z",
+    "lead_time": 22.458
+  },
+  {
+    "text": "vou pagr R$ 777,77 amanhã cedo",
+    "id": 47,
+    "entities": [
+      {
+        "start": 9,
+        "end": 18,
+        "text": "R$ 777,77",
+        "labels": [
+          "VALOR"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 30,
+        "text": "amanhã cedo",
+        "labels": [
+          "TEMPO"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 8,
+        "text": "vou pagr",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 9,
+        "end": 18,
+        "text": "R$ 777,77",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 30,
+        "text": "amanhã cedo",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 8,
+        "text": "vou pagr",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 9,
+        "end": 18,
+        "text": "R$ 777,77",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 30,
+        "text": "amanhã cedo",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 8,
+        "text": "vou pagr",
+        "labels": [
+          "planejado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 9,
+        "end": 18,
+        "text": "R$ 777,77",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 30,
+        "text": "amanhã cedo",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 8,
+        "text": "vou pagr",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 9,
+        "end": 18,
+        "text": "R$ 777,77",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 19,
+        "end": 30,
+        "text": "amanhã cedo",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 0,
+        "end": 8,
+        "text": "vou pagr",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 47,
+    "created_at": "2025-05-18T12:44:14.885304Z",
+    "updated_at": "2025-05-18T12:44:14.885304Z",
+    "lead_time": 22.02
+  },
+  {
+    "text": "to desempregado no momento",
+    "id": 48,
+    "entities": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "to desempregado no momento",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "to desempregado no momento",
+        "labels": [
+          "negativa"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "to desempregado no momento",
+        "labels": [
+          "negado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "to desempregado no momento",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "to desempregado no momento",
+        "labels": [
+          "implicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 48,
+    "created_at": "2025-05-18T12:44:28.448856Z",
+    "updated_at": "2025-05-18T12:44:28.448856Z",
+    "lead_time": 13.049
+  },
+  {
+    "text": "paguei, segue o comprovante em anexo",
+    "id": 49,
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "text": "paguei",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 6,
+        "text": "paguei",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 6,
+        "text": "paguei",
+        "labels": [
+          "afirmado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 6,
+        "text": "paguei",
+        "labels": [
+          "passado"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 6,
+        "text": "paguei",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 49,
+    "created_at": "2025-05-18T12:44:38.221750Z",
+    "updated_at": "2025-05-18T12:44:38.221750Z",
+    "lead_time": 9.281
+  },
+  {
+    "text": "não tenho como pagar agora, aenas se não ficar apertado",
+    "id": 50,
+    "entities": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "não tenho como pagar agora",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 28,
+        "end": 55,
+        "text": "aenas se não ficar apertado",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "não tenho como pagar agora",
+        "labels": [
+          "negativa"
+        ]
+      },
+      {
+        "start": 28,
+        "end": 55,
+        "text": "aenas se não ficar apertado",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "não tenho como pagar agora",
+        "labels": [
+          "negado"
+        ]
+      },
+      {
+        "start": 28,
+        "end": 55,
+        "text": "aenas se não ficar apertado",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "não tenho como pagar agora",
+        "labels": [
+          "presente"
+        ]
+      },
+      {
+        "start": 28,
+        "end": 55,
+        "text": "aenas se não ficar apertado",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "não tenho como pagar agora",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 28,
+        "end": 55,
+        "text": "aenas se não ficar apertado",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 50,
+    "created_at": "2025-05-18T12:45:13.234701Z",
+    "updated_at": "2025-05-18T12:45:13.234701Z",
+    "lead_time": 34.58
+  },
+  {
+    "text": "tem como reduzir os jros?",
+    "id": 51,
+    "entities": [
+      {
+        "start": 9,
+        "end": 24,
+        "text": "reduzir os jros",
+        "labels": [
+          "CONDIÇÃO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 9,
+        "end": 24,
+        "text": "reduzir os jros",
+        "labels": [
+          "negativa"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 9,
+        "end": 24,
+        "text": "reduzir os jros",
+        "labels": [
+          "condicional"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 9,
+        "end": 24,
+        "text": "reduzir os jros",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 9,
+        "end": 24,
+        "text": "reduzir os jros",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 51,
+    "created_at": "2025-05-18T12:45:51.118905Z",
+    "updated_at": "2025-05-18T12:45:51.118905Z",
+    "lead_time": 37.348
+  },
+  {
+    "text": "consigo pagar antes das 18h",
+    "id": 53,
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "text": "consigo pagar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 14,
+        "end": 27,
+        "text": "antes das 18h",
+        "labels": [
+          "TEMPO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 13,
+        "text": "consigo pagar",
+        "labels": [
+          "positiva"
+        ]
+      },
+      {
+        "start": 14,
+        "end": 27,
+        "text": "antes das 18h",
+        "labels": [
+          "positiva"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 13,
+        "text": "consigo pagar",
+        "labels": [
+          "planejado"
+        ]
+      },
+      {
+        "start": 14,
+        "end": 27,
+        "text": "antes das 18h",
+        "labels": [
+          "planejado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 13,
+        "text": "consigo pagar",
+        "labels": [
+          "futuro"
+        ]
+      },
+      {
+        "start": 14,
+        "end": 27,
+        "text": "antes das 18h",
+        "labels": [
+          "futuro"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 13,
+        "text": "consigo pagar",
+        "labels": [
+          "explicito"
+        ]
+      },
+      {
+        "start": 14,
+        "end": 27,
+        "text": "antes das 18h",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 53,
+    "created_at": "2025-05-18T12:46:28.308990Z",
+    "updated_at": "2025-05-18T12:46:28.308990Z",
+    "lead_time": 33.029
+  },
+  {
+    "text": "não tenho ocmo pagar agora",
+    "id": 54,
+    "entities": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "não tenho ocmo pagar agora",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "não tenho ocmo pagar agora",
+        "labels": [
+          "negativa"
+        ]
+      }
+    ],
+    "modalidade": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "não tenho ocmo pagar agora",
+        "labels": [
+          "negado"
+        ]
+      }
+    ],
+    "referencia_temporal": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "não tenho ocmo pagar agora",
+        "labels": [
+          "presente"
+        ]
+      }
+    ],
+    "explicitude": [
+      {
+        "start": 0,
+        "end": 26,
+        "text": "não tenho ocmo pagar agora",
+        "labels": [
+          "explicito"
+        ]
+      }
+    ],
+    "annotator": 1,
+    "annotation_id": 54,
+    "created_at": "2025-05-18T12:46:46.102929Z",
+    "updated_at": "2025-05-18T12:46:46.102929Z",
+    "lead_time": 17.275
+  }
+]

@@ -70,23 +70,13 @@ class GeradorFrases:
     
     def gerar_dataset(self, n_amostras: int, output_file: str):
         """
-        Gera um dataset de frases em formato JSON para Label Studio
+        Gera um dataset de frases com entidades identificadas
         Args:
             n_amostras: Número de frases a serem geradas
             output_file: Caminho para o arquivo de saída
         """
-        # Lista para armazenar todas as frases como objetos
-        frases_json = []
-        
-        # Gerar frases e adicionar ao formato adequado para Label Studio
-        for _ in range(n_amostras):
-            frase = self.gerar_frase()
-            # Cada frase é um objeto com a chave "text"
-            frases_json.append({"text": frase})
-        
-        # Salvar como JSON (array de objetos)
         with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(frases_json, f, ensure_ascii=False, indent=2)
-        
-        print(f"Dataset gerado com {n_amostras} frases e salvo em {output_file} (formato Label Studio)")
+            for _ in range(n_amostras):
+                frase = self.gerar_frase()
+                f.write(json.dumps({"text": frase}) + '\n')
 

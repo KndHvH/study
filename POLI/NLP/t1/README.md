@@ -8,19 +8,17 @@ Este projeto tem como objetivo desenvolver um sistema de inteligência artificia
 
 O sistema identifica e classifica entidades como:
 
-- **TEMPO**: expressões temporais como "amanhã", "nesse mês"
-- **VALOR**: expressões monetárias como "R$500", "mil reais"
-- **PAGAMENTO**: intenções de pagamento como "quero pagar", "vou pagar"
-- **CONDIÇÃO**: condicionais como "se for à vista", "caso eu receba"
-- **FORMA_PAGAMENTO**: métodos como "PIX", "12x sem juros"
-- **LOCAL**: locais como "agência da Penha", "Banco do Brasil"
+- **TEMPO**: expressões temporais como "amanhã", "essa semana", "depois do almoço"
+- **VALOR**: expressões monetárias como "R$500", "mil reais", "50%"
+- **PAGAMENTO**: intenções de pagamento como "vou pagar", "não consigo pagar", "comprometo"
+- **CONDIÇÃO**: condicionais como "quando receber o adiantamento", "com juros", "se sobrar dinheiro"
+- **FORMA_PAGAMENTO**: métodos como "boleto", "transferência", "dinheiro"
 
 Para cada entidade, o sistema extrai atributos como:
-- Orientação (positiva/negativa)
-- Ação relacionada
-- Modalidade (afirmado, planejado, incerto, negado, condicional)
-- Referência temporal
-- Explicitude
+- **Orientação**: positiva, negativa ou neutra
+- **Modalidade**: afirmado, planejado, incerto, negado, condicional
+- **Referência temporal**: presente, passado, futuro
+- **Explicitude**: explícito ou implícito
 
 ## Abordagem Técnica
 
@@ -40,33 +38,66 @@ O pipeline de processamento funciona da seguinte forma:
 
 ```
 .
-├── data/                  # Dados para treinamento e avaliação
-│   ├── generator/         # Gerador de frases sintéticas
-│   ├── frases_sinteticas/ # Frases geradas para treinamento
-│   └── anotacoes/         # Anotações do Label Studio
-├── src/                   # Código-fonte principal
-├── modelos/               # Modelos treinados
-└── notebooks/             # Notebooks para exploração e análise
+├── data/                      # Dados para treinamento e avaliação
+│   ├── generator/             # Gerador de frases sintéticas
+│   ├── frases_sinteticas.json # Frases geradas para treinamento
+│   ├── labeled_data.json      # Dados anotados para treinamento
+│   └── label.xml              # Template de anotação para Label Studio
+├── src/                       # Código-fonte principal
+├── modelos/                   # Modelos treinados
+└── notebooks/                 # Notebooks para exploração e análise
 ```
 
 ## Componentes
 
 1. **Gerador de Frases**: Cria frases sintéticas baseadas em templates parametrizáveis, incluindo mecanismos para simular erros de digitação comuns.
 
-2. **Anotação com Label Studio**: Interface para anotação manual de entidades nas frases, com exportação em formato JSON contendo posições de início e fim de cada entidade.
+2. **Anotação com Label Studio**: Interface para anotação manual de entidades nas frases, com exportação em formato JSON contendo posições de início e fim de cada entidade e seus atributos.
 
 3. **Pipeline de Extração**: Transformação de textos em representações vetoriais e classificação de atributos semânticos usando BERT e classificadores MLP.
 
-## Como as Coisas Funcionarão
+## Esquema de Anotação
 
-O fluxo de trabalho do projeto será:
+O esquema de anotação atual define:
 
-1. Geração de frases sintéticas para criar dados de treinamento iniciais
-2. Anotação manual das frases para marcar entidades e seus atributos
-3. Transformação dos dados anotados em features vetoriais usando BERT
-4. Treinamento de classificadores para cada tipo de atributo
-5. Avaliação e refinamento do modelo com métricas de performance
-6. Implantação do sistema como uma API para processamento de novas mensagens
+1. **Cinco tipos principais de entidades**:
+   - TEMPO: quando ocorre uma ação ("amanhã", "depois do almoço")
+   - VALOR: quantias monetárias ("R$ 1.111,11", "600 reais")
+   - PAGAMENTO: ações relacionadas a pagamento ("vou pagar", "não tenho como")
+   - CONDIÇÃO: pré-condições e qualificadores ("quando receber", "se sobrar dinheiro")
+   - FORMA_PAGAMENTO: método de pagamento ("boleto", "transferência")
+
+2. **Quatro dimensões de atributos**:
+   - **Orientação**: atitude/sentimento associado à entidade
+     - positiva: indica disposição para pagar
+     - negativa: indica recusa ou dificuldade
+     - neutra: sem carga emocional clara
+   
+   - **Modalidade**: status factual da entidade
+     - afirmado: fato concreto ("fiz o pagamento")
+     - planejado: intenção futura ("vou pagar")
+     - incerto: dúvida ou incerteza ("é 500 com juros?")
+     - negado: recusa ou impossibilidade ("não consigo pagar")
+     - condicional: dependente de condição ("se eu vender")
+   
+   - **Referência temporal**: quando ocorre
+     - presente: ocorrendo agora ou em tempo indefinido
+     - passado: já ocorreu ("paguei")
+     - futuro: ocorrerá ("amanhã")
+   
+   - **Explicitude**: quão direta é a informação
+     - explícito: claramente declarado
+     - implícito: indiretamente sugerido
+
+## Estado Atual do Projeto
+
+Já realizamos:
+- [x] Criação de templates de mensagens informais
+- [x] Implementação de mecanismo de simulação de erros de digitação
+- [x] Definição completa do esquema de anotação de entidades
+- [x] Configuração do ambiente Label Studio com template personalizado
+- [x] Anotação de conjunto inicial com ~50 exemplos de mensagens
+- [x] Estruturação dos dados anotados em formato JSON
 
 ## Roadmap Detalhado
 
@@ -75,18 +106,8 @@ O fluxo de trabalho do projeto será:
 - [x] Desenvolver templates informais para mensagens de WhatsApp
 - [x] Implementar mecanismo de introdução de erros de digitação
 - [x] Gerar conjunto inicial de frases sintéticas
-- [ ] Adicionar maior variabilidade nos templates
-- [ ] Implementar técnicas de data augmentation para aumentar diversidade
-- [ ] Validar qualidade das frases geradas com avaliação humana
+- [x] Adicionar maior variabilidade nos templates
 
-### 2. Preparação para Anotação
-- [ ] Configurar ambiente Label Studio
-  - [ ] Definir template de anotação customizado
-  - [ ] Configurar exportação em formato compatível
-  - [ ] Implementar validação de anotações
-- [ ] Criar guia de anotação com exemplos
-- [ ] Desenvolver sistema de avaliação de concordância entre anotadores
-- [ ] Preparar interface para importação e exportação de dados
 
 ### 3. Pré-processamento dos Dados
 - [ ] Implementar tokenização com BERT
@@ -107,7 +128,6 @@ O fluxo de trabalho do projeto será:
 - [ ] Treinar classificadores para cada tipo de atributo:
   - [ ] Tipo de entidade
   - [ ] Orientação
-  - [ ] Ação relacionada
   - [ ] Modalidade
   - [ ] Referência temporal
   - [ ] Explicitude
@@ -142,11 +162,18 @@ Para configurar o ambiente de desenvolvimento:
 ```bash
 # Instalar dependências de desenvolvimento
 uv add -d black isort flake8 pytest
+
+# Instalar dependências do projeto
+uv add pandas numpy spacy torch transformers
+uv add "label-studio[data-sdk]"
 ```
 
 ## Próximos Passos
 
-- [ ] Expandir o conjunto de templates e variações
-- [ ] Melhorar o algoritmo de geração de erros
-- [ ] Implementar interface para anotação rápida
-- [ ] Treinar modelo com dados reais anotados 
+- [x] Expandir o conjunto de templates e variações
+- [x] Melhorar o algoritmo de geração de erros
+- [x] Implementar interface para anotação no Label Studio
+- [ ] Aumentar o conjunto de dados anotados (meta: 200+ exemplos)
+- [ ] Treinar modelo BERT customizado para NER
+- [ ] Implementar classificadores para atributos de entidades
+- [ ] Desenvolver API para processamento de novas mensagens 
