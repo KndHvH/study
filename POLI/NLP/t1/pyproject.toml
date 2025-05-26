@@ -6,15 +6,19 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "colorama>=0.4.6",
+    "datasets>=3.6.0",
+    "evaluate>=0.4.3",
     "flask>=1.1.2",
     "ipykernel>=6.29.5",
     "label-studio>=1.18.0",
     "label-studio-ml>=1.0.9",
     "label-studio-sdk>=1.0.12",
+    "matplotlib>=3.10.3",
+    "num2words>=0.5.14",
     "pillow>=11.2.1",
     "requests>=2.32.3",
     "scikit-learn>=1.6.1",
     "semver>=3.0.4",
-    "torch>=2.7.0",
-    "transformers>=4.52.3",
+    "seqeval>=1.2.2",
+    "transformers[torch]>=4.52.3",
 ]

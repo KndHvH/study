@@ -17,7 +17,7 @@ def main():
                         help='Número de frases a serem geradas')
     parser.add_argument('--saida', type=str, default='./frases_sinteticas.json',
                         help='Caminho para arquivo de saída JSON')
-    parser.add_argument('--taxa-erro', type=float, default=0.2,
+    parser.add_argument('--taxa-erro', type=float, default=0.03,
                         help='Taxa de erro de digitação (0.0 a 1.0)')
     args = parser.parse_args()
     

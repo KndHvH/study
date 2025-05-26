@@ -9,7 +9,6 @@
     <Label value="VALOR" background="#f5222d" />
     <Label value="PAGAMENTO" background="#52c41a" />
     <Label value="CONDIÇÃO" background="#fa8c16" />
-    <Label value="FORMA_PAGAMENTO" background="#722ed1" />
   </Labels>
   
   <!-- Categorias de atributos para entidades -->
