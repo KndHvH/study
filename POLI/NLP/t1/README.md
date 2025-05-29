@@ -134,46 +134,16 @@ Já realizamos:
 - [ ] Avaliar desempenho de cada classificador
 - [ ] Realizar análise de erros e refinamento
 
-### 6. Integração e Pipeline Completo
-- [ ] Desenvolver pipeline unificado de processamento
-- [ ] Implementar geração de saída JSON estruturada
-- [ ] Otimizar desempenho e latência
-- [ ] Criar testes automatizados para o sistema completo
-- [ ] Documentar API e interfaces
 
-### 7. Avaliação e Refinamento
-- [ ] Desenvolver métricas de avaliação específicas para o domínio
-- [ ] Realizar testes com dados reais de conversas
-- [ ] Identificar e corrigir casos problemáticos
-- [ ] Realizar nova rodada de treinamento com dados ampliados
-- [ ] Comparar desempenho com baseline e alternativas
-
-### 8. Implantação
-- [ ] Desenvolver API REST para o serviço
-- [ ] Criar documentação técnica e de usuário
-- [ ] Implementar monitoramento e logging
-- [ ] Desenvolver mecanismos de feedback para melhoria contínua
-- [ ] Preparar exemplos de integração
-
-## Desenvolvedores
+## Setup
 
 Para configurar o ambiente de desenvolvimento:
 
 ```bash
-# Instalar dependências de desenvolvimento
-uv add -d black isort flake8 pytest
-
 # Instalar dependências do projeto
-uv add pandas numpy spacy torch transformers
-uv add "label-studio[data-sdk]"
+pip install uv
+uv sync
+
+uv
 ```
 
-## Próximos Passos
-
-- [x] Expandir o conjunto de templates e variações
-- [x] Melhorar o algoritmo de geração de erros
-- [x] Implementar interface para anotação no Label Studio
-- [ ] Aumentar o conjunto de dados anotados (meta: 200+ exemplos)
-- [ ] Treinar modelo BERT customizado para NER
-- [ ] Implementar classificadores para atributos de entidades
-- [ ] Desenvolver API para processamento de novas mensagens 

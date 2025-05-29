@@ -41,11 +41,4 @@
     <Label value="passado" background="#fa8c16" />
     <Label value="futuro" background="#1890ff" />
   </Labels>
-  
-  <Labels name="explicitude" toName="text">
-    <Label value="explicito" background="#52c41a" />
-    <Label value="implicito" background="#f5222d" />
-  </Labels>
-  
-
 </View>
