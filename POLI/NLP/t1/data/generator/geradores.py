@@ -316,7 +316,7 @@ class GeradorFrases:
             novas_palavras.append(palavra)
         return ' '.join(novas_palavras)
     
-    def gerar_dataset(self, n_amostras: int, output_file: str):
+    def gerar_dataset(self, n_amostras: int, output_file: str, tipo_frase: str = None):
         """
         Gera um dataset de frases com entidades identificadas
         Args:
@@ -325,7 +325,7 @@ class GeradorFrases:
         """
         frases = []
         for _ in range(n_amostras):
-            frase = self.gerar_frase()
+            frase = self.gerar_frase(tipo_frase=tipo_frase)
             frases.append({"text": frase})
             
         with open(output_file, 'w', encoding='utf-8') as f:

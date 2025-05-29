@@ -19,6 +19,8 @@ def main():
                         help='Caminho para arquivo de saída JSON')
     parser.add_argument('--taxa-erro', type=float, default=0.03,
                         help='Taxa de erro de digitação (0.0 a 1.0)')
+    parser.add_argument('--tipo-frase', type=str, default=None,
+                        help='Tipo de frase a ser gerada')
     args = parser.parse_args()
     
     # Criar diretório de saída se não existir
@@ -29,7 +31,7 @@ def main():
     
     # Gerar dataset
     print(f"Gerando {args.amostras} frases sintéticas...")
-    gerador.gerar_dataset(n_amostras=args.amostras, output_file=args.saida)
+    gerador.gerar_dataset(n_amostras=args.amostras, output_file=args.saida, tipo_frase=args.tipo_frase)
     
     print("✓ Geração concluída!")
     print(f"✓ Arquivo salvo em: {args.saida}")
