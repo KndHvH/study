@@ -42,9 +42,7 @@ O pipeline de processamento funciona da seguinte forma:
 │   ├── frases_sinteticas.json # Frases geradas para treinamento
 │   ├── labeled_data.json      # Dados anotados para treinamento
 │   └── label.xml              # Template de anotação para Label Studio
-├── src/                       # Código-fonte principal
-├── modelos/                   # Modelos treinados
-└── notebooks/                 # Notebooks para exploração e análise
+└── model/                     # Modelo treinado
 ```
 
 ## Componentes
