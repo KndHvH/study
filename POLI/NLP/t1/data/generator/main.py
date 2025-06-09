@@ -27,8 +27,8 @@ Exemplos de uso:
         """
     )
     
-    parser.add_argument('--amostras', type=int, default=1000, 
-                        help='Número de frases a serem geradas (padrão: 1000)')
+    parser.add_argument('--amostras', type=int, default=2000, 
+                        help='Número de frases a serem geradas (padrão: 2000)')
     parser.add_argument('--saida', type=str, default='./frases_rotuladas.json',
                         help='Caminho para arquivo de saída JSON (padrão: ./frases_rotuladas.json)')
     parser.add_argument('--test', action='store_true',
