@@ -2,41 +2,88 @@
 # -*- coding: utf-8 -*-
 
 """
-Script principal para geração de frases sintéticas para treinamento
-de modelo de extração de entidades em negociações financeiras.
+Script principal para o gerador melhorado de frases sintéticas.
+Melhorias:
+- Frases mais reais e ricas com múltiplas entidades
+- Classes balanceadas com distribuição natural  
+- Valores e parcelamentos gerados dinamicamente
+- Formato de saída compatível com labeled_data.json
 """
 
 import os
 import argparse
-from geradores import GeradorFrases
+from gerador import GeradorFrases
 
 def main():
-    """Função principal para execução do gerador de frases"""
-    parser = argparse.ArgumentParser(description='Gerador de frases sintéticas para treinamento de NER')
+    """Função principal para execução do gerador melhorado"""
+    parser = argparse.ArgumentParser(
+        description='Gerador melhorado de frases sintéticas para treinamento de NER',
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Exemplos de uso:
+  python main.py --amostras 1000
+  python main.py --amostras 500 --saida ./frases_v2.json
+  python main.py --test  # Para testar apenas algumas frases
+        """
+    )
+    
     parser.add_argument('--amostras', type=int, default=1000, 
-                        help='Número de frases a serem geradas')
-    parser.add_argument('--saida', type=str, default='./frases_sinteticas.json',
-                        help='Caminho para arquivo de saída JSON')
-    parser.add_argument('--taxa-erro', type=float, default=0.03,
-                        help='Taxa de erro de digitação (0.0 a 1.0)')
-    parser.add_argument('--tipo-frase', type=str, default=None,
-                        help='Tipo de frase a ser gerada')
+                        help='Número de frases a serem geradas (padrão: 1000)')
+    parser.add_argument('--saida', type=str, default='./frases_rotuladas.json',
+                        help='Caminho para arquivo de saída JSON (padrão: ./frases_rotuladas.json)')
+    parser.add_argument('--test', action='store_true',
+                        help='Modo teste: gera apenas 10 frases para validação')
+    parser.add_argument('--seed', type=int, default=None,
+                        help='Seed para reprodutibilidade (opcional)')
+    
     args = parser.parse_args()
     
+    # Configurar seed se fornecido
+    if args.seed:
+        import random
+        random.seed(args.seed)
+        print(f"🔧 Seed definido: {args.seed}")
+    
     # Criar diretório de saída se não existir
-    os.makedirs(os.path.dirname(args.saida), exist_ok=True)
+    os.makedirs(os.path.dirname(os.path.abspath(args.saida)), exist_ok=True)
     
     # Inicializar gerador
-    gerador = GeradorFrases(taxa_erro=args.taxa_erro)
+    print("🚀 Inicializando gerador melhorado...")
+    gerador = GeradorFrases()
     
-    # Gerar dataset
-    print(f"Gerando {args.amostras} frases sintéticas...")
-    gerador.gerar_dataset(n_amostras=args.amostras, output_file=args.saida, tipo_frase=args.tipo_frase)
-    
-    print("✓ Geração concluída!")
-    print(f"✓ Arquivo salvo em: {args.saida}")
-    
-
+    if args.test:
+        # Modo teste - apenas mostrar algumas frases
+        print("\n🧪 MODO TESTE - Gerando frases de exemplo:")
+        print("=" * 60)
+        
+        for i in range(10):
+            frase, entidades = gerador.gerar_frase()
+            print(f"\n{i+1:2d}. 💬 {frase}")
+            
+            for j, ent in enumerate(entidades):
+                print(f"    {j+1}. 🏷️  '{ent.texto}'")
+                print(f"        Tipo: {ent.tipo.value}")
+                print(f"        Orientação: {ent.orientacao.value}")
+                print(f"        Modalidade: {ent.modalidade.value}")
+                print(f"        Ref. Temporal: {ent.referencia_temporal.value}")
+        
+        print("\n✅ Teste concluído! O gerador está funcionando corretamente.")
+        print("💡 Para gerar dataset completo, execute sem --test")
+        
+    else:
+        # Modo produção - gerar dataset completo
+        print(f"📝 Gerando {args.amostras} frases sintéticas...")
+        print(f"💾 Arquivo de saída: {args.saida}")
+        print("⏳ Processando...")
+        
+        gerador.gerar_dataset_balanceado(
+            n_amostras=args.amostras, 
+            output_file=args.saida
+        )
+        
+        print("\n✅ Geração concluída com sucesso!")
+        print(f"📁 Arquivo salvo em: {os.path.abspath(args.saida)}")
+        
 
 if __name__ == "__main__":
     main() 

@@ -8,6 +8,7 @@ dependencies = [
     "accelerate>=0.26.0",
     "colorama>=0.4.6",
     "datasets>=3.6.0",
+    "dateparser>=1.2.0",
     "evaluate>=0.4.3",
     "flask>=1.1.2",
     "ipykernel>=6.29.5",
@@ -22,6 +23,7 @@ dependencies = [
     "seaborn>=0.13.2",
     "semver>=3.0.4",
     "seqeval>=1.2.2",
+    "text2num>=3.0.0",
     "torch>=2.6.0",
     "transformers>=4.52.3",
 ]

@@ -1,0 +1,299 @@
+NER e classificação de sentimento com BERT e Regressões Logísticas
+Matias Cornelsen Herklotz - 98267
+1. Objetivo
+1.1 Contexto
+A ideia desse trabalho, nasceu diante de um problema real de um projeto do meu trabalho. fazendo uma explicação breve, temos o desafio de construir uma IA capaz de interagir e negociar com pessoas, no contexto de dividas bancarias, dependendo o mínimo possível de LLMs e outras soluções complexas.
+Resumindo, uma das principais necessidades dessa IA, seria a de “entender” mensagens dos devedores, ou seja, extrair suas informações e intensões e estruturar de uma forma logica.
+1.1 Problemas
+Quando pensamos no NER tradicional para essa tarefa, nos deparamos com 3 primeiros obstáculos:
+1.1.1 Entidades não convencionais
+gostaria de pagar em 3x sem juros
+No exemplo acima podemos ver uma condição de pagamento, que dentro do contexto de negociação, é extremamente importante e recorrente, mas tradicionalmente não é reconhecida como uma entidade, então isso já sugere que precisaremos treinar algo novo.
+1.1.2 Mais de um sentimento por frase
+Essa semana não consigo,  pago mês que vem!
+Como estamos lidando com devedores, é de suma importância classificar corretamente a intenção de pagamento, ou seja, extrair do texto, se aquele devedor tem ou não o desejo de pagar.
+Geralmente, quando estamos falando de analise de sentimentos, classificamos uma frase inteira como positiva ou negativa, porem nesse exemplo, podemos ver que isso não funcionaria muito bem, uma vez que a primeira frase claramente carrega um sentimento negativo, e a segunda um positivo.
+Em um primeiro pensamento, podemos simplesmente separar as frases e trabalhar a nível de oração, mas ainda teríamos o problema de ter mais de um sentimento em uma mensagem, ou seja, para a IA, o devedor deseja pagar e não deseja pagar ao mesmo tempo?
+1.1.3 Mais de uma mesma entidade por frase
+600 reais eh mt caro,  consigo 350
+Nesse exemplo, o NER tradicional traria 2 valores, o 600 e o 350, mas qual que a nossa IA deveria considerar? nos sabemos que o 600 carrega um sentimento negativo e 350 e um sentimento positivo, mas novamente caímos no caso anterior, temos múltiplas entidades com múltiplos sentimento atrelados a elas, para uma IA, fica complexo classificar corretamente.
+2. Método utilizado
+2.1 Ideia
+Apos a analise do problema, ficou nítido para mim, que o que eu buscava era uma forma de ao mesmo tempo identificar uma entidade, também classificar ela em relação a seu sentimento.
+Por mais que isso poderia ficar redundante em alguns casos, era o nível de granularidade que eu gostaria.
+Para sintetizar um pouco, meu ponto de partida foi esse:
+{
+  "texto": "não vou conseguir pagar nesse mês, mas pago na primeira semana do mês que vem",
+  "entidades": [
+    {
+      "entidade": "nesse mês",
+      "tipo": "TEMPO",
+      "orientacao": "negativo"
+    },
+    {
+      "entidade": "primeira semana do mês que vem",
+      "tipo": "TEMPO",
+      "orientacao": "positivo"
+    }
+  ]
+}
+2.2 Modelo
+Ao pesquisar mais sobre, entendi que para fazer algo nesse sentido, eu tinha 2 abordagens principais:
+2.2.1 Seq2Seq
+Essa abordagem seria a de usar um modelo como o T5 e GPT-2, para “gerar” esse meu JSON de saida, aparenta ser uma solução simples com apenas o risco de alucinações na hora de estruturar a saída.
+Mas descartei essa ideia dado o escopo do projeto ser limitado a modelos não de instruções.
+2.2.2 BERT + ML
+A segunda abordagem seria a combinação de duas estrategias, primeiro, identificamos as entidades com o BERT, e depois classificamos essas entidades quanto ao seus sentimentos, com uma rede neural por exemplo.
+3. Corpus
+3.1 Entidades
+Apos alguns testes, cheguei nos seguintes tipos de entidade que acredito servirem ao proposito do trabalho:
+3.1.1 Valor
+Valores monetários ou números em geral
+Ex:
+Pago 10 Reais
+eu paguei mês passado o boleto de R$120,22
+Hoje só consigo arcar com vinte
+3.1.2 Tempo
+Datas ou frases que expressam uma noção de tempo.
+Ex:
+Hoje nao consigo pagar
+o vencimento do boleto eh 12/7?
+To sem dinheiro ate o final de abril
+3.1.3 Condição
+Frases que expressam uma condição, geralmente voltada a intensão de pagamento.
+Ex:
+por hora, tá complicado
+podemos fazer em 3 vezes?
+To sem dinheiro ate o final de abril
+3.1.4 Pagamento
+Frases que expressam a ação ou intenção de pagamento. 
+Ex:
+Hoje nao consigo pagar
+podemos fazer em 3 vezes?
+Hoje só consigo arcar com vinte
+3.2 Atributos
+Para os atributos de cada entidade, eu cheguei nesses 3, cada um com seus respectivos possíveis valores, eles são responsáveis por carregar informações como sentimento e o tempo de cada entidade.
+E um ponto interessante, seria que Entidades diferentes podem ter os mesmos atributos, quando isso ocorre, sugere que essas estidades estão compondo um mesmo sentimento, isso faz ainda mais sentido quando olhamos quais são os valores desses atributos.
+3.2.1 Orientação
+Orientação da entidade em relação ao sentimento de pagamento, mesmo que o mesmo seja ausente na frase.
+Pode ser Positiva, Negativa e Neutra, ou seja, seja uma data, valor, condição ou uma própria ação de pagamento, eu tenho uma orientação da intenção de pagamento atrelado
+Ex:
+podemos fazer em 3 vezes?  
+fazer → Entidade: Pagamento, Orientação: Positiva
+3 vezes → Entidade: Condição, Orientação: Positiva
+
+Hoje nao consigo, apenas semana que vem  
+Hoje → Entidade: Tempo, Orientação: Negativa
+semana que vem → Entidade: Tempo, Orientação: Positiva
+3.2.2 Modalidade
+Modalidade da entidade, carrega sua relação com possíveis outras entidades, pode servir como um complemento ao sentimento da Orientação.
+Pode ser Condicional, Afirmado, Planejado, Negado e Incerto.
+Em um primeiro momento pode parecer um pouco redundante, e em alguns casos vai ser mesmo, mas esses 2 atributos, Modalidade e Orientação, carregam informações distintas.
+Ex:
+acredito pagar na terca
+pagar → Entidade: Pagamento, Orientação: Positiva, Modalidade: Planejado
+terca → Entidade: Tempo, Orientação: Positiva,  Modalidade: Planejado
+
+consigo quitar agora mesmo 
+quitar → Entidade: Pagamento, Orientação: Positiva, Modalidade: Afirmado
+agora mesmo → Entidade: Tempo, Orientação: Positiva, Modalidade: Afirmado
+
+pago se tiver algum desconto 
+pago → Entidade: Pagamento, Orientação: Positiva, Modalidade: Condicional
+desconto → Entidade: Condição, Orientação: Positiva, Modalidade: Condicional
+3.2.3 Referência Temporal
+Carrega o tempo que ocorre a entidade.
+Pode ser Passado, Presente e Futuro
+Ex:
+acredito pagar na terca
+pagar → Entidade: Pagamento, Referência Temporal: Futuro
+terca → Entidade: Tempo, Referência Temporal: Futuro
+
+consigo quitar agora mesmo 
+quitar → Entidade: Pagamento, Referência Temporal: Presente
+agora mesmo → Entidade: Tempo, Referência Temporal: Presente
+3.3 Dados
+Como tanto as frases quanto os rótulos são extremamente especificas do projeto, eu nem procurei muito por um dataset pronto, pois sabia que seria necessário a construção do meu próprio corpus.
+A estrategia que eu pensei foi a de gerar as frases usando templates e placeholders de uma forma aleatória, foi um processo iterativo, mas ao final do projeto, eu tinha um fluxo como eu gostaria, onde eu especificava um tipo e uma quantidade e ele gerava frases com uma qualidade considerável.
+3.3.1 Templates
+Eu tenho algumas categorias de templates, algumas com placeholders e outras sem, mas a ideia seria ter o suficiente para gerar um dataset rico.
+O único problema desse método é o viés que ele gera, uma vez que frases muito parecidas podem ser geradas, principalmente as que não tem placeholders.
+Ex:
+"{condição} mando o valor"
+"no máximo {tempo} eu acerto"
+"{condição}, então acerto {valor} {tempo}"
+“não tenho como pagar agora"
+"to sem dinheiro até {tempo}"
+3.3.2 Placeholders
+Dependendo do placeholder, ou ele pega de uma lista pronta ou ele tenta gerar de uma forma mais complexa, por exemplo, o valor, ele primeiro escolhe se é decimal ou não, por extenso ou não, e depois gera um numero aleatório.
+3.4 Rótulos
+Para rotular os dados, primeiramente utilizei do Label-Studio para rotular os dados manualmente, ele e uma ferramenta open-source própria para isso.
+
+
+Porem ao rotular aproximadamente 50 frases, percebi que esse processo era extremamente exaustivo e trabalhoso.
+Uma segunda abordagem, foi pedir para uma LLM rotular mais dados a partir do que eu rotulei manualmente, e devolver a saída da LLM para o label-studio.
+Mas isso também se provou bem trabalhoso, uma vez que era bem difícil fazer com que a LLM realmente entendesse como eu rotulo e o porque, assim como manter a qualidade dos rótulos e o formato necessário para importar no label-studio, que por si só era bem confuso.
+A estrategia foi pedir ao GPT rotular de 5 em 5 frases, depois de indas e vindas, de explicações e correções, eu percebi que se ele lidava com mais frases por vez a qualidade ia diminuindo consideravelmente.
+No final, consegui 300 frases rotuladas, mas com uma certa inconsistência, por exemplo, vi casos onde eu rotulava:
+"vou pagar ..." 
+como a intensão de pagamento, e a IA rotulava como:
+"vou pagar ..." 
+ou seja, as vezes a IA usava seu próprio conhecimento para rotular, ao invés dos exemplos de rótulos que forneci, o que em alguns casos faz um certo sentido quando peço  para rotular um exemplo muito distinto do que foi apresentado antes.
+mas no geral, essa inconsistência inevitavelmente afeta o desempenho final do modelo.
+3.4.1 Saída
+A saída do label-studio no final ficou algo assim:
+Eu tenho a frase, a lista de entidades, onde começa e termina, e quais são os seus atributos.
+[
+  {
+    "text": "vou pagar semana que vem pode ser?",
+    "id": 1,
+    "entities": [
+      {
+        "start": 4,
+        "end": 9,
+        "text": "pagar",
+        "labels": [
+          "PAGAMENTO"
+        ]
+      },
+      {
+        "start": 10,
+        "end": 24,
+        "text": "semana que vem",
+        "labels": [
+          "TEMPO"
+        ]
+      }
+    ],
+    "orientacao": [
+      {
+        "start": 4,
+        "end": 9,
+        "text": "pagar",
+        "labels": [
+          "positiva"
+        ]
+      },
+...
+4. Resultados
+4.1 Modelo BERT IOB
+Para o primeiro modelo, fiz um Fine-tuning do BERT para a tarefa.
+O treinamento do modelo foi algo simples, não precisei ajustar muito os hiperparametros, e acredito que isso se da pela complexidade da tarefa em si,
+as classes são bem distintas e no final tivemos um F1 de 0.77.
+Mas conseguimos observar 2 inconsistências preocupantes. 
+4.1.1 Baixo score de certeza
+No exemplo abaixo podemos ver que apesar de ter classificado corretamente, sua certeza esta relativamente baixa, e eu penso que isso só pode se dar por frases parecidas classificadas de uma forma diferente.
+Ex:
+"eu nao vou conseguir pagar esse mes, mas consigo pagar no proximo se tiver algum desconto"
+
+Span	Tag	Score
+vou conseguir pagar	PAGAMENTO	0.41
+esse mes 	TEMPO	0.52
+consigo pagar	PAGAMENTO	0.50
+no proximo	TEMPO	0.49
+se tiver algum desconto	CONDIÇÃO	0.52
+
+4.1.2 Rotulos errados
+Ao analisar os resultados do Real versus Predito, podemos ver novamente, que muitas frases foram classificadas incorretamente, o que também faz com que o F1 Score apesar de alto, passe uma falsa sensação de segurança.
+Ex
+"nao da pra quitar com desconto?"
+
+Span	Real	Predito	Correto
+nao	O	O	O
+da           	O	O	O
+pra	O	O	O
+quitar	O	O	PAGAMENTO    
+com	PAGAMENTO    	PAGAMENTO    	O
+desconto?	PAGAMENTO    	CONDIÇÃO	CONDIÇÃO
+
+Mas esse resultado foi um efeito colateral da decisão de usar IA para rotular os dados, no caso um trade-off, para um modelo de qualidade eu preciso de uma quantidade considerável de frases, 300 frases ainda estava distante da minha primeira meta, ou seja, ou eu peco na qualidade, ou na quantidade.
+4.2 Modelo Regressão Logística
+4.2.1 Dataset
+Para prever os atributos, extraímos os embedding da frase toda (768) novamente com o BERT, da entidade (768), e do contexto da entidade (768), ou seja, a entidade mais uma frase antes e depois, mais o tipo da entidade, que passamos para one-hot (4), 
+Totalizando um dataset X de 2308 colunas apenas de embeddings, que ao normalizar e passar pelo PCA com explicabilidade 0.95, totalizamos em media 180 Colunas
+
+4.2.2 Treinamento
+A distribuição das classes esta completamente desbalanceada, como podemos ver no gráfico a seguir:
+
+Isso se da a como eu gerei as frases, de forma randômica, e também a realidade das frases, por exemplo, uma frase no passado ou neutra, é muito mais escassa, e talvez nem agregue ao modelo.
+Em um primeiro momento tentei mitigar isso atribuindo pesos proporcionais a cada classe.
+Ex:
+
+Classe	Amostras	Peso
+0	90	1.564
+1          	505	0.279
+2	14	10.057
+3	30	4.693
+4	65	2.166
+
+4.2.3 Modelo
+A ideia principal era usar uma única rede neural para prever os 3 atributos ao mesmo tempo, mas quando fiz uma baseline de regressão logística, com um modelo para cada atributo, o resultado foi muito bom, então nem cheguei a fazer a rede.
+Tivemos uma macro avg F1 de  0.60, 0.78 e 0.88
+e weighted avg F1 de  0.91, 0.86 e 0.96
+Tentando entender o porque o resultado estava tao positivo, eu fiz um Cross-Validation:
+Tempo:  CV F1-macro: 0.840 ± 0.131 
+Modalidade:  CV F1-macro: 0.759 ± 0.029
+Orientacao:  CV F1-macro: 0.925 ± 0.056
+E também um gráfico de coeficientes por classe, das melhores 20 colunas:
+
+Parecia que estava tudo certo, eu achei que novamente o modelo era bem simples, as classes bem distintas e as colunas carregando toda essa explicabilidade.
+Apenas quando eu fui fazer inferências que eu entendi o que estava de fato acontecendo, as classes são tao desbalanceadas, que nem mitigando com os pesos eu consegui arrumar, o modelo estava “overfitando”.
+Na hora de prever ele tinha uma certeza absurda de todas as classes, mesmo errando, todas as inferências tinham 0.99+ de score, o que chamou minha atenção.
+Eu dei uma mitigada nisso definindo a regularização C: 0.01
+Mas ainda sim, a solução correta seria balancear o dataset, porque mesmo assim o resultado não ficou perfeito, na maioria das previsões ele tem um score de 0.90+ o que ainda me deixou inseguro.
+5. Conclusões
+Ficou claro conforme o desenvolvimento, que o elo mais fraco desse projeto sem duvida foram os dados, gerar o meu próprio corpus foi definitivamente desafiador.
+Mas o que achei mais intrigante, foi que apesar de tudo isso, apesar de todos os defeitos, eu acredito que tive um resultado satisfatório, o modelo faz inferências com sucesso, e com uma qualidade relativamente boa.
+Acredito que os defeitos e erros ainda são minoria no dataset como um todo, o que faz com que a maioria puxe o modelo para o caminho correto, foi o que consegui interpretar do resultado.
+Isso só mostra que com a mesma pipeline, porem investindo um tempo valioso para validar cada uma das frases rotuladas artificialmente, corrigir e enriquecer o gerador de frases, e montar uma pipeline saudável de geração e rotulagem de frases, o resultado pode ser extremamente positivo.
+5.1 Inferências 
+O modelo final ficou assim:
+Eu entro com uma frase:
+“posso pagar 780?”
+e ele devolve um JSON com as inferencias:
+{'posso pagar 780?': [{'texto': 'pagar',
+   'entidade': 'PAGAMENTO',
+   'referencia_temporal': 'presente',
+   'modalidade': 'condicional',
+   'orientacao': 'positiva',
+   'score_ner': 0.4954344,
+   'score': {'referencia_temporal': array([5.41345453e-02, 1.86979334e-04, 9.45678475e-01]),
+    'modalidade': array([0.01174551, 0.95855419, 0.02323925, 0.00348306, 0.00297798]),
+    'orientacao': array([6.96517507e-04, 5.24856976e-03, 9.94054913e-01])}},
+  {'texto': '780',
+   'entidade': 'VALOR',
+   'referencia_temporal': 'presente',
+   'modalidade': 'condicional',
+   'orientacao': 'positiva',
+   'score_ner': 0.71976703,
+   'score': {'referencia_temporal': array([6.79397172e-02, 1.50112353e-04, 9.31910170e-01]),
+    'modalidade': array([0.03332835, 0.5734354 , 0.38830009, 0.00248964, 0.00244653]),
+    'orientacao': array([0.00090438, 0.09809769, 0.90099794])}}],
+E com essa interpretação logica e estruturada, eu consigo gerar relatórios simples de if-else
+Ex:
+...
+if orientacao == 'negativa':
+    pode = "não pode"
+elif orientacao == 'positiva':
+    pode = "pode"
+...
+if ent_label == 'PAGAMENTO':
+            if modalidade == 'afirmado':
+                relatorio += f"A pessoa afirma que {pode} pagar {tempo_desc}.\n"
+            elif modalidade == 'negado':
+                relatorio += f"A pessoa diz que {pode} pagar {tempo_desc}.\n"
+...
+Eu consigo ter esse resultado:
+“posso pagar 780?”
+”A pessoa diz que pode pagar dada a condição.”
+”A pessoa coloca como condição o valor "780" para pagar agora.”
+“semana que vem prometo pagar”
+”A pessoa planeja pagar em "que vem" no futuro.”
+”A pessoa diz que pode pagar, mas isso está planejado para algum momento futuro.”
+“nao consigo, perdi o emprego”
+”A pessoa diz que não pode pagar agora.”
+”A pessoa define a condição "perdi o emprego" como impeditivo para pagar.”
+Obviamente eu selecionei os melhores casos, mas isso só serve para corroborar com o que eu falei, o projeto tem muito potencial, e o ponto de partida de melhoria é claro e relativamente simples.
+6. Links extras
+Modelo - https://github.com/KndHvH/study/blob/2/POLI/NLP/t1/model/model.ipynb
+Corpus - https://github.com/KndHvH/study/tree/2/POLI/NLP/t1/data
