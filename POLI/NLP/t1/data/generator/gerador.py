@@ -94,7 +94,7 @@ class GeradorFrases:
                 "{tempo_negativo} {expressao_negativa}, {conector_alternativa} {tempo_positivo} {acao_pagamento}",
                 "{valor_alto} {expressao_negativa}, {conector_alternativa} {valor_baixo}",
                 "{condicao_negativa} agora, apenas {condicao_positiva}",
-                "infelizmente {expressao_temporal_negativa}, mas {tempo_positivo} {acao_pagamento}"
+                "{expressao_temporal_negativa}, mas {tempo_positivo} {acao_pagamento}"
             ],
             
             "SIMPLES": [
@@ -102,6 +102,10 @@ class GeradorFrases:
                 "{tempo} {expressao_temporal}",
                 "{acao_pagamento} {tempo}",
                 "to com {valor} só",
+                "quero {acao_pagamento_infinitivo}",
+                "quero {acao_pagamento_infinitivo} {tempo}",
+                "vou {acao_pagamento_infinitivo}",
+                "vou {acao_pagamento_infinitivo} {tempo}",
                 "{condicao_positiva}",
                 "{situacao_dificil}"
             ]
@@ -117,53 +121,172 @@ class GeradorFrases:
                 "quando entrar dinheiro", "se rolar pagamento", "quando meu salário cair",
                 "se sobrar dinheiro", "assim que bater na conta", "quando resolver uns problemas",
                 "em 2x", "em 3x", "parcelado em 6x", "50% agora", "metade agora", "30% de entrada",
-                "com desconto", "se der um desconto", "com uma redução"
+                "com desconto", "se der um desconto", "com uma redução",
+                "quando sair meu 13º", "no final do mês", "quando receber do cliente",
+                "se vender umas coisas", "quando conseguir um freela", "se aparecer um trabalho",
+                "quando minha mãe me ajudar", "se meu pai emprestar", "quando resolver umas pendências",
+                "dividido em 4x", "parcelado em 12x", "25% de entrada", "70% agora",
+                "se baixar um pouco", "com facilidade de pagamento", "se tiver prazo",
+                "quando resolver minha situação", "se der uma força", "com jeitinho brasileiro",
+                "quando cair o auxílio", "se conseguir um adiantamento", "quando vender o carro",
+                "se alugar meu quarto", "quando receber uns trocados", "se der uma moral",
+                "com cartão", "no cartão de crédito", "via pix", "em espécie",
+                "quando sair minha rescisão", "se conseguir um empréstimo", "quando der",
+                "se a vida melhorar", "quando as coisas se ajeitarem", "se Deus quiser"
             ],
             
             "condicao_negativa": [
                 "não tenho como", "não consigo", "não dá pra", "sem condição de",
                 "sem condições de", "não vai dar pra", "impossível", "nem se eu quisesse",
-                "não vai dar", "é impossível"
+                "não vai dar", "é impossível", "nem pensar", "nem fodendo",
+                "tá fora de cogitação", "não tem cabimento", "nem rola", "zero chance",
+                "não tem jeito", "não dá mesmo", "sem chance nenhuma", "não há possibilidade",
+                "tá fora da realidade", "nem com reza forte", "não consigo nem sonhando",
+                "tá muito além das minhas possibilidades", "nem que eu quisesse muito",
+                "não tenho de onde tirar", "não tenho nem pra comer", "tô zerado",
+                "não sobra nem pro café", "tô no osso", "sem condição alguma",
+                "nem vendendo o rim", "nem com milagre", "impossível total"
             ],
             
             "situacao_dificil": [
                 "sem dinheiro", "duro", "liso", "ferrado", "no vermelho total",
                 "desempregado", "apertado", "com as contas atrasadas", "sem grana",
-                "devendo", "enrolado com outras contas"
+                "devendo", "enrolado com outras contas", "quebrado", "lascado",
+                "no sufoco", "apertadão", "na pior", "na merda", "fudido",
+                "sem um centavo", "zerado", "raspando o tacho", "comendo pão dormido",
+                "vivendo de milagre", "sobrevivendo", "me virando nos 30",
+                "passando necessidade", "apertado financeiramente", "na lona",
+                "sem perspectiva", "desgraçado", "numa situação difícil",
+                "meio perdido", "bem complicado", "numa enrascada",
+                "sem saída", "numa situação delicada", "bem apertado mesmo",
+                "numa bad", "numa cilada", "em apuros", "numa sinuca",
+                "batendo cabeça", "numa situação feia", "ralando muito"
             ],
             
             "situacao_financeira": [
                 "bem apertado esse mês", "com dificuldade financeira", "sem margem nenhuma",
-                "me virando como dá", "tentando arrumar grana", "vendo o que consigo fazer"
+                "me virando como dá", "tentando arrumar grana", "vendo o que consigo fazer",
+                "correndo atrás de dinheiro", "batalhando pra conseguir", "me esforçando muito",
+                "fazendo malabarismo financeiro", "equilibrando os pratos", "dando um jeito",
+                "improvisando bastante", "contando os centavos", "economizando no tudo",
+                "cortando gastos", "vivendo no limite", "administrando a crise",
+                "fazendo conta de cabeça", "pesando cada gasto", "priorizando o essencial",
+                "tentando se organizar", "buscando alternativas", "correndo atrás de soluções",
+                "fazendo das tripas coração", "dando duro pra conseguir", "batalhando muito"
             ],
             
             "expressao_valor": ["eu consigo", "posso pagar", "tá ok", "dá pra fazer"],
             "expressao_valor_alto": ["puxado demais", "muito caro", "salgado pra mim", "demais"],
             "expressao_negativa": ["não dá", "não rola", "tá puxado", "é muito", "não consigo"],
             
-            "expressao_temporal": ["eu resolvo", "vai dar", "consigo pagar", "acerto"],
-            "expressao_temporal_negativa": ["não vai dar", "é impossível", "tá complicado", "já era pra mim"],
+            "expressao_temporal": [
+                "eu resolvo", "vai dar", "consigo pagar", "acerto", "dou um jeito",
+                "me organizo", "providencio", "vou atrás", "corro atrás", "me viro",
+                "faço acontecer", "dou conta", "resolvo essa", "quebro um galho",
+                "me ajusto", "consigo dar conta", "vou conseguir", "vai dar certo",
+                "tudo certo", "pode deixar", "tá garantido", "sem problema"
+            ],
+            "expressao_temporal_negativa": [
+                "não vai dar", "é impossível", "tá complicado", "já era pra mim",
+                "ferrou", "tá foda", "não tem jeito", "difícil demais", "pesado",
+                "complicado demais", "muito apertado", "sem condição", "não rola",
+                "impossível total", "nem pensando", "tá tenso", "muito difícil",
+                "sem chance", "não consigo", "muito pesado", "tá osso"
+            ],
             
             "expressao_impossibilidade": [
-                "nem fudendo que consigo", "nem rola", "sem chance de", "não tem como"
+                "nem fudendo que consigo", "nem rola", "sem chance de", "não tem como",
+                "nem fodendo", "nem pensando", "impossível total", "nem sonhando",
+                "nem que a vaca tussa", "nem com reza forte", "nem que chova canivete",
+                "nem amarrado", "nem com uma arma na cabeça", "nem que o mundo acabe",
+                "nem vendendo o rim", "nem com milagre", "nem Jesus na causa"
             ],
             
             "acao_negociacao": [
                 "parcelar", "dar um desconto", "reduzir os juros", "fazer um acordo",
-                "negociar esse valor", "reduzir essa multa"
+                "negociar esse valor", "reduzir essa multa", "abater alguma coisa",
+                "dar uma facilitada", "fazer um jeitinho", "dar uma moral",
+                "fazer uma promoção", "dar uma condição especial", "facilitar pra mim",
+                "fazer um preço camarada", "dar uma força", "ajudar com o preço",
+                "fazer vista grossa", "relevar uns juros", "dar um desconto especial",
+                "fazer um acordo bom", "negociar de boa", "chegar num meio termo",
+                "fazer um trato", "dar uma oportunidade", "ser mais flexível"
             ],
             
-            "conector_alternativa": ["mas", "porém", "só que", "então"],
+            "conector_alternativa": [
+                "mas", "porém", "só que", "então", "aí", "daí", "agora",
+                "entretanto", "contudo", "todavia", "no entanto", "assim",
+                "dessa forma", "desse jeito", "por outro lado", "em compensação"
+            ],
             
             # Componentes para problemas identificados
-            "consigo": ["consigo pagar", "consigo fazer", "consigo mandar", "consigo depositar"],
-            "valor_menor": ["valor menor", "um valor mais baixo", "algo mais barato", "desconto"],
-            "modificador_valor": ["demais", "muito", "puxado", "salgado"],
+            "consigo": [
+                "consigo pagar", "consigo fazer", "consigo mandar", "consigo depositar",
+                "consigo bancar", "consigo arcar", "consigo cobrir", "consigo honrar",
+                "consigo dar conta", "consigo assumir", "consigo cumprir", "consigo tocar"
+            ],
+            "valor_menor": [
+                "valor menor", "um valor mais baixo", "algo mais barato", "desconto",
+                "preço melhor", "condição especial", "valor reduzido", "preço camarada",
+                "algo mais acessível", "valor mais em conta", "preço promocional",
+                "desconto especial", "valor facilitado", "preço de amigo"
+            ],
+            "modificador_valor": [
+                "demais", "muito", "puxado", "salgado", "caro", "alto", "pesado",
+                "exagerado", "absurdo", "surreal", "impossível", "fora de série",
+                "nas alturas", "pela hora da morte", "astronômico", "abusivo"
+            ],
             
-            "tempo_negativo": ["hoje", "agora", "esse mês", "essa semana"],
-            "tempo_positivo": ["amanhã", "semana que vem", "mês que vem", "depois"],
-            "valor_alto": ["R$ 800", "R$ 1000", "R$ 1500"],
-            "valor_baixo": ["R$ 200", "R$ 300", "R$ 400"]
+            "tempo_negativo": [
+                "hoje", "agora", "esse mês", "essa semana", "neste momento",
+                "já", "ainda hoje", "hoje mesmo", "agora mesmo", "nesta semana",
+                "neste final de semana", "até amanhã", "até sexta", "urgente"
+            ],
+            "tempo_positivo": [
+                "amanhã", "semana que vem", "mês que vem", "depois", "mais tarde",
+                "no futuro", "quando der", "daqui uns dias", "na próxima semana",
+                "no próximo mês", "ano que vem", "em breve", "logo logo",
+                "assim que possível", "quando tiver condição", "no tempo certo"
+            ],
+            "valor_alto": [
+                "R$ 800", "R$ 1000", "R$ 1500", "R$ 2000", "R$ 2500", "R$ 3000",
+                "R$ 1200", "R$ 1800", "R$ 900", "R$ 1100", "R$ 1300", "R$ 1600"
+            ],
+            "valor_baixo": [
+                "R$ 200", "R$ 300", "R$ 400", "R$ 150", "R$ 250", "R$ 350",
+                "R$ 100", "R$ 180", "R$ 220", "R$ 280", "R$ 320", "R$ 380"
+            ],
+            
+            # Novos componentes adicionados
+            "intensificador": [
+                "muito", "bem", "super", "mega", "extremamente", "demais",
+                "pra caramba", "pra caralho", "pra burro", "do caralho",
+                "absurdamente", "completamente", "totalmente", "bastante"
+            ],
+            
+            "grias_dinheiro": [
+                "grana", "din-din", "trocados", "bufunfa", "tutu", "money",
+                "cash", "graninha", "dinheirinho", "mosca", "pila", "real"
+            ],
+            
+            "expressoes_tempo_coloquial": [
+                "rapidinho", "na hora", "ligeiro", "voando", "correndo",
+                "de uma vez", "sem demora", "já já", "num instante",
+                "na velocidade da luz", "toca o sino", "sem enrolação"
+            ],
+            
+            "formas_pagamento": [
+                "no pix", "via pix", "no cartão", "em dinheiro", "à vista",
+                "no débito", "no crédito", "via transferência", "por depósito",
+                "em espécie", "via ted", "por boleto", "no app do banco"
+            ],
+            
+            "expressoes_compromisso": [
+                "palavra de homem", "juro por Deus", "te garanto", "pode confiar",
+                "dou minha palavra", "prometo", "assumo o compromisso", "te asseguro",
+                "pode acreditar", "é sério", "sem brincadeira", "de verdade",
+                "na moral", "de coração", "com toda sinceridade"
+            ]
         }
     
     def gerar_valor_dinamico(self):
@@ -302,45 +425,66 @@ class GeradorFrases:
         return frase_final, entidades_mapeadas
     
     def _mapear_placeholder_para_tipo(self, placeholder):
-        """Mapeia nome do placeholder para tipo de entidade"""
-        # Placeholders que não são entidades (modificadores, conectores)
-        nao_entidades = ["conector_alternativa", "modificador_valor", "intensificador", 
-                        "expressao_intensidade", "adverbio_negacao"]
+        """Mapeia nome do placeholder para tipo de entidade - MAIS ESPECÍFICO"""
         
-        if placeholder in nao_entidades:
-            return None  # Não são entidades relevantes
-        elif "acao_pagamento" in placeholder or "consigo" in placeholder:
+        # 1. ENTIDADES CLARAS DE PAGAMENTO
+        if "acao_pagamento" in placeholder or placeholder in ["consigo", "posso"]:
             return TipoEntidade.PAGAMENTO
-        elif "tempo" in placeholder:
+        
+        # 2. ENTIDADES CLARAS DE TEMPO
+        elif placeholder == "tempo" or placeholder in ["tempo_positivo", "tempo_negativo"]:
             return TipoEntidade.TEMPO
-        elif "valor" in placeholder and "menor" not in placeholder:
+        
+        # 3. ENTIDADES CLARAS DE VALOR
+        elif placeholder == "valor" or placeholder in ["valor_alto", "valor_baixo"]:
             return TipoEntidade.VALOR
-        elif "valor_menor" in placeholder or "desconto" in placeholder or "parcel" in placeholder:
-            return TipoEntidade.CONDICAO  # "valor menor" é uma condição de negociação
-        elif "condicao" in placeholder or "situacao" in placeholder or placeholder in ["acao_negociacao"]:
+        
+        # 4. ENTIDADES CLARAS DE CONDIÇÃO
+        elif placeholder in ["condicao_positiva", "condicao_negativa", "acao_negociacao", 
+                            "valor_menor", "desconto", "parcelamento", "valor_reduzido"]:
             return TipoEntidade.CONDICAO
-        elif placeholder in ["expressao_impossibilidade", "expressao_negativa", "expressao_temporal_negativa"]:
-            return TipoEntidade.CONDICAO
+        
+        # 5. NÃO SÃO ENTIDADES - EXPANDIDO
+        elif placeholder in [
+            "conector_alternativa", "modificador_valor", "intensificador", 
+            "expressao_intensidade", "adverbio_negacao",
+            # Expressões que são contexto, não entidades
+            "expressao_valor", "expressao_valor_alto", "expressao_negativa",
+            "expressao_temporal", "expressao_temporal_negativa", "expressao_impossibilidade",
+            "situacao_dificil", "situacao_financeira",
+            # Modificadores e conectores
+            "conector", "modificador", "intensificador", "qualificador"
+        ]:
+            return None  # NÃO rotular - é melhor que rotular errado
+        
+        # 6. DEFAULT: NÃO ROTULAR
         else:
-            return TipoEntidade.CONDICAO  # Default
+            return None  # Preferir não rotular a rotular errado
     
     def determinar_atributos_por_categoria(self, categoria, entidade_texto, frase, posicao_entidade):
         """Determina orientação e modalidade baseada na CATEGORIA do template"""
         
-        # PAGAMENTO_POSITIVO: todas entidades são positivas e afirmadas/planejadas
+        # PAGAMENTO_POSITIVO: todas entidades são positivas, mas modalidade depende do contexto
         if categoria == "PAGAMENTO_POSITIVO":
             orientacao = Orientacao.POSITIVA
             
             # Verifica se há condições na frase que tornam tudo CONDICIONAL
-            palavras_condicionais = ["só", "apenas", "somente", "no máximo", "até", "quando muito", 
-                                   "metade", "desconto", "parcel", "se", "quando", "caso", "consegui juntar"]
-            if any(palavra in frase.lower() for palavra in palavras_condicionais):
+            palavras_condicionais = ["pra", "para", "quando", "se", "caso", "assim que", 
+                                   "depois que", "só", "apenas", "somente", "consegui juntar"]
+            
+            # Expressões que indicam PLANEJADO (intenção firme)
+            palavras_planejadas = ["vou", "vai", "irei", "farei", "pagarei", "quitarei", 
+                                 "garanto", "prometo", "assumo", "me comprometo"]
+            
+            if any(palavra in frase.lower() for palavra in palavras_planejadas):
+                modalidade = Modalidade.PLANEJADO
+            elif any(palavra in frase.lower() for palavra in palavras_condicionais):
                 modalidade = Modalidade.CONDICIONAL
-            elif re.search(r'\b(pago|quito|acerto|mando|deposito|transfiro|faço|pagar|quitar|fazer|consigo)\b', 
+            elif re.search(r'\b(pago|quito|acerto|mando|deposito|transfiro|faço)\b', 
                         entidade_texto.lower()):
                 modalidade = Modalidade.AFIRMADO
             else:
-                modalidade = Modalidade.PLANEJADO
+                modalidade = Modalidade.CONDICIONAL  # Default mais conservador
                 
         # DIFICULDADE: todas entidades são negativas 
         elif categoria == "DIFICULDADE":
@@ -364,40 +508,93 @@ class GeradorFrases:
     
     def _analisar_dupla_orientacao(self, entidade_texto, frase, posicao_entidade):
         """Analisa entidades em frases com dupla orientação (antes/depois do conector)"""
-        # Verifica conectores que mudam o sentido
-        pos_mas = -1
-        for conector in ["mas", "porém", "só que", "então"]:
+        # Encontra conectores que mudam o sentido
+        conectores = ["mas", "porém", "só que", "então", "dessa forma", "por outro lado", 
+                     "entretanto", "contudo", "todavia", "no entanto", "apenas", "só"]
+        
+        pos_conector = -1
+        conector_encontrado = ""
+        for conector in conectores:
             if conector in frase.lower():
-                pos_mas = frase.lower().find(conector)
+                pos_conector = frase.lower().find(conector)
+                conector_encontrado = conector
                 break
         
-        if pos_mas != -1:
-            # Se a entidade vem DEPOIS do conector, é positiva (mas condicional)
-            if posicao_entidade > pos_mas:
-                return Orientacao.POSITIVA, Modalidade.CONDICIONAL
+        if pos_conector != -1:
+            # Se a entidade vem ANTES do conector, analisa se é negativa
+            if posicao_entidade < pos_conector:
+                # Expressões que indicam impossibilidade/negação forte
+                expressoes_negativas = [
+                    "nem que eu quisesse", "nem se eu quisesse", "nem que", "nem se",
+                    "impossível", "não tem como", "não consigo", "não dá", "não vai dar",
+                    "sem condição", "sem chance", "zero chance", "nem pensar", "nem rola",
+                    "fora de cogitação", "nem fodendo", "nem pensando", "tá fora",
+                    "não tenho como", "não há possibilidade", "tá impossível",
+                    # ADICIONADO: expressões que indicam valor alto/impossível
+                    "é muito", "tá muito", "muito caro", "muito alto", "não rola"
+                ]
+                
+                # Verifica se a entidade ou contexto anterior tem expressões negativas
+                texto_antes_conector = frase[:pos_conector].lower()
+                entidade_lower = entidade_texto.lower()
+                
+                # Se a entidade contém expressão negativa OU está no contexto negativo
+                if (any(expr in entidade_lower for expr in expressoes_negativas) or
+                    any(expr in texto_antes_conector for expr in expressoes_negativas) or
+                    any(neg in entidade_lower for neg in ["não", "sem", "impossível", "nem", "zero"])):
+                    return Orientacao.NEGATIVA, Modalidade.NEGADO
+                else:
+                    # PARA VALORES: Se está antes do conector em dupla orientação, É NEGATIVO
+                    # "R$ 800 não rola, mas R$ 200" - o primeiro valor é sempre negativo
+                    return Orientacao.NEGATIVA, Modalidade.NEGADO
             else:
-                return Orientacao.NEGATIVA, Modalidade.NEGADO
+                # Se a entidade vem DEPOIS do conector, é positiva
+                # Verifica se indica planejamento futuro
+                if any(fut in entidade_texto.lower() for fut in ["logo", "depois", "amanhã", "próxim", "vou", "vai", "quando", "se"]):
+                    return Orientacao.POSITIVA, Modalidade.CONDICIONAL  # Mudei de PLANEJADO para CONDICIONAL pois "quando conseguir" é condicional
+                else:
+                    return Orientacao.POSITIVA, Modalidade.CONDICIONAL
         
         # Default se não achou conector
         return Orientacao.POSITIVA, Modalidade.CONDICIONAL
     
     def _analisar_simples(self, entidade_texto, frase):
-        """Analisa frases simples baseado no contexto"""
-        # Expressões fortemente negativas
-        indicadores_negativos = ["impossível", "ferrado", "duro", "liso", "sem", "não", 
-                               "nem se eu quisesse", "não vai dar", "é impossível", "fora da realidade"]
-        palavras_limitadoras = ["só", "apenas", "somente", "no máximo", "até", "quando muito"]
+        """Analisa frases simples baseado no contexto - CORRIGIDO"""
+        # Expressões fortemente negativas - mais específicas
+        indicadores_negativos_fortes = [
+            "impossível", "sem condição", "sem chance", "zero chance", 
+            "nem pensar", "nem rola", "fora de cogitação", "nem fodendo", 
+            "não tem como", "não há possibilidade", "não consigo", "não dá"
+        ]
+        
+        # Expressões condicionais
+        palavras_condicionais = ["pra", "para", "só", "apenas", "somente", "no máximo", "até", "quando muito"]
+        
+        # Expressões de planejamento
+        palavras_planejadas = ["vou", "vai", "irei", "farei", "pagarei", "quitarei"]
         
         # Verifica se a entidade ou contexto tem expressões negativas
-        if any(ind in entidade_texto.lower() for ind in indicadores_negativos) or \
-           any(ind in frase.lower() for ind in indicadores_negativos):
+        entidade_lower = entidade_texto.lower()
+        frase_lower = frase.lower()
+        
+        # 1. SE A ENTIDADE EM SI É NEGATIVA (ex: "não consigo")
+        if any(ind in entidade_lower for ind in indicadores_negativos_fortes):
             return Orientacao.NEGATIVA, Modalidade.NEGADO
-        elif any(palavra in frase.lower() for palavra in palavras_limitadoras):
+        
+        # 2. SE A FRASE TEM NEGAÇÃO FORTE E ESPECÍFICA
+        elif any(ind in frase_lower for ind in indicadores_negativos_fortes):
+            return Orientacao.NEGATIVA, Modalidade.NEGADO
+        
+        # 3. VERIFICA MODALIDADES POSITIVAS
+        elif any(palavra in frase_lower for palavra in palavras_planejadas):
+            return Orientacao.POSITIVA, Modalidade.PLANEJADO
+        elif any(palavra in frase_lower for palavra in palavras_condicionais):
             return Orientacao.POSITIVA, Modalidade.CONDICIONAL
+        
+        # 4. DEFAULT: AFIRMADO POSITIVO
+        # Para frases simples como "pago semana que vem", assume positivo
         else:
             return Orientacao.POSITIVA, Modalidade.AFIRMADO
-    
-
     
     def _determinar_ref_temporal(self, texto_tempo):
         """Determina referência temporal baseada no texto"""
@@ -412,23 +609,52 @@ class GeradorFrases:
     def _determinar_ref_temporal_contextual(self, entidade_texto, frase):
         """Determina referência temporal considerando contexto da frase"""
         # Para entidades temporais, usa análise específica
-        if re.search(r'\b(hoje|agora|já)\b', entidade_texto.lower()):
+        texto_lower = entidade_texto.lower()
+        
+        # PRESENTE - palavras que indicam tempo atual
+        indicadores_presente = ["hoje", "agora", "já", "neste momento", "nesta semana", 
+                               "esse mês", "esta semana", "atualmente", "no momento"]
+        
+        # FUTURO - palavras que indicam tempo futuro  
+        indicadores_futuro = ["amanhã", "depois", "semana que vem", "mês que vem", "ano que vem",
+                             "próxim", "final do mês", "início do mês", "logo", "em breve",
+                             "daqui", "quando", "futuramente", "mais tarde", "depois de",
+                             "na próxima", "no próximo", "logo logo", "em uns dias"]
+        
+        # PASSADO - palavras que indicam tempo passado
+        indicadores_passado = ["ontem", "semana passada", "mês passado", "ano passado", 
+                              "anteriormente", "antes", "já foi", "passou"]
+        
+        # Verifica primeiro a entidade específica
+        if any(palavra in texto_lower for palavra in indicadores_presente):
             return ReferenciatTemporal.PRESENTE
-        elif re.search(r'\b(amanhã|depois|semana que vem|mês que vem|ano que vem)\b', entidade_texto.lower()):
+        elif any(palavra in texto_lower for palavra in indicadores_futuro):
+            return ReferenciatTemporal.FUTURO
+        elif any(palavra in texto_lower for palavra in indicadores_passado):
+            return ReferenciatTemporal.PASSADO
+        
+        # Se não encontrou na entidade, analisa contexto da frase
+        frase_lower = frase.lower()
+        
+        # Verifica indicadores de futuro na frase (mais provável)
+        if any(palavra in frase_lower for palavra in indicadores_futuro):
+            return ReferenciatTemporal.FUTURO
+        elif any(palavra in frase_lower for palavra in indicadores_presente):
+            return ReferenciatTemporal.PRESENTE
+        elif any(palavra in frase_lower for palavra in indicadores_passado):
+            return ReferenciatTemporal.PASSADO
+        
+        # Análise contextual adicional
+        # Se tem "pra + verbo", geralmente é futuro
+        if re.search(r'\bpra\s+\w+', frase_lower) or re.search(r'\bpara\s+\w+', frase_lower):
+            return ReferenciatTemporal.FUTURO
+            
+        # Se tem "vou/vai + verbo", é futuro
+        if re.search(r'\b(vou|vai|irei|farei)\b', frase_lower):
             return ReferenciatTemporal.FUTURO
         
-        # Para outras entidades, analisa contexto temporal da frase
-        indicadores_futuro = ["amanhã", "depois", "semana que vem", "mês que vem", "ano que vem", 
-                             "vou", "vai", "quando", "futuro", "próxim"]
-        indicadores_presente = ["hoje", "agora", "já", "neste momento"]
-        
-        # Prioriza indicadores de futuro
-        if any(palavra in frase.lower() for palavra in indicadores_futuro):
-            return ReferenciatTemporal.FUTURO
-        elif any(palavra in frase.lower() for palavra in indicadores_presente):
-            return ReferenciatTemporal.PRESENTE
-        else:
-            return ReferenciatTemporal.PRESENTE  # Default
+        # Default: presente
+        return ReferenciatTemporal.PRESENTE
     
     def _escolher_modalidade(self) -> Modalidade:
         """Escolhe modalidade baseada na distribuição"""
@@ -455,15 +681,19 @@ class GeradorFrases:
         entidades = self.criar_entidades_com_atributos(entidades_mapeadas, categoria, frase)
         
         # Aplica erros naturais
-        frase_final = self._aplicar_erros_naturais(frase)
+        #frase_final = self._aplicar_erros_naturais(frase)
         
-        return frase_final, entidades
+        return frase, entidades
     
     def criar_entidades_com_atributos(self, entidades_mapeadas, categoria, frase):
         """Converte mapeamento de entidades para objetos Entidade com atributos corretos"""
         entidades = []
         
         for ent_map in entidades_mapeadas:
+            # VALIDAÇÃO PÓS-GERAÇÃO: Filtra entidades inválidas
+            if not self._validar_entidade(ent_map["texto"], ent_map["tipo"]):
+                continue  # Pula entidades que não fazem sentido
+            
             orientacao, modalidade = self.determinar_atributos_por_categoria(
                 categoria, ent_map["texto"], frase, ent_map["start"]
             )
@@ -480,6 +710,64 @@ class GeradorFrases:
             entidades.append(entidade)
         
         return entidades
+    
+    def _validar_entidade(self, texto, tipo):
+        """Valida se uma entidade faz sentido semanticamente - CORRIGIDO"""
+        texto_lower = texto.lower().strip()
+        
+        # Filtros por TIPO
+        if tipo == TipoEntidade.VALOR:
+            # VALOR deve ter números, "reais" ou porcentagem - RELAXADO
+            if not (re.search(r'\d', texto) or 'real' in texto_lower or '%' in texto):
+                return False
+        
+        elif tipo == TipoEntidade.TEMPO:
+            # TEMPO deve ter indicadores temporais específicos OU datas - EXPANDIDO
+            indicadores_tempo = [
+                'hoje', 'amanhã', 'ontem', 'semana', 'mês', 'ano', 'dia',
+                'agora', 'depois', 'antes', 'logo', 'breve', 'próxim',
+                'final', 'início', 'manhã', 'tarde', 'noite', 'daqui',
+                'momento', 'hora', 'tempo', 'quando'
+            ]
+            # Aceita datas no formato dd/mm/yyyy ou similares
+            tem_data = re.search(r'\d{1,2}[/\-]\d{1,2}[/\-]\d{2,4}', texto)
+            
+            if not (any(ind in texto_lower for ind in indicadores_tempo) or tem_data):
+                return False
+        
+        elif tipo == TipoEntidade.PAGAMENTO:
+            # PAGAMENTO deve ter verbos de pagamento - EXPANDIDO
+            verbos_pagamento = [
+                'pag', 'quit', 'acer', 'mand', 'deposit', 'transf', 
+                'consig', 'faz', 'envi', 'conseguir', 'posso'
+            ]
+            if not any(verbo in texto_lower for verbo in verbos_pagamento):
+                return False
+        
+        elif tipo == TipoEntidade.CONDICAO:
+            # CONDIÇÃO deve ter palavras relevantes
+            palavras_condicao = [
+                'desconto', 'parcel', 'entrada', 'prazo', 'facilidade',
+                'condição', 'jeito', 'forma', 'maneira', 'quando', 'se',
+                'fora de cogitação', 'cogitação', 'reduz', 'menor', 'baixar',
+                'valor reduzido', '%', 'porcentagem'
+            ]
+            if not any(palavra in texto_lower for palavra in palavras_condicao):
+                return False
+        
+        # Filtros GERAIS - palavras muito genéricas que não são entidades - REDUZIDO
+        palavras_genericas = [
+            'é', 'mas', 'né', 'ne', 'ai', 'aí', 'então', 'daí'
+        ]
+        
+        if texto_lower in palavras_genericas:
+            return False
+        
+        # Filtro de tamanho - entidades muito pequenas são suspeitas
+        if len(texto_lower) <= 1:  # Mudei de 2 para 1 para aceitar números como "80"
+            return False
+            
+        return True
     
     def _aplicar_erros_naturais(self, texto: str) -> str:
         """Aplica erros de digitação naturais"""
@@ -596,7 +884,7 @@ if __name__ == "__main__":
     gerador = GeradorFrases()
     
     print("🧪 TESTANDO GERADOR CORRIGIDO:")
-    for i in range(5):
+    for i in range(20):
         frase, entidades = gerador.gerar_frase()
         print(f"\n{i+1}. '{frase}'")
         for ent in entidades:
