@@ -76,7 +76,7 @@ Exemplos de uso:
         print(f"💾 Arquivo de saída: {args.saida}")
         print("⏳ Processando...")
         
-        gerador.gerar_dataset_balanceado(
+        gerador.gerar_dataset(
             n_amostras=args.amostras, 
             output_file=args.saida
         )
