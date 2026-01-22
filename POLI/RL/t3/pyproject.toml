@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
+<<<<<<< HEAD
 dependencies = [
     "gymnasium[toy-text]>=1.2.0",
     "ipykernel>=6.29.5",
@@ -15,3 +16,6 @@ dependencies = [
     "seaborn>=0.13.2",
     "tqdm>=4.67.1",
 ]
+=======
+dependencies = []
+>>>>>>> 64937351bc45d6dbae950b5314f5bb88e71b1d40
