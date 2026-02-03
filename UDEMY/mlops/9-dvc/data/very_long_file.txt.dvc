@@ -1,0 +1,5 @@
+outs:
+- md5: 3db59d93cc55bd5d242ebc13f1a65933
+  size: 27497900
+  hash: md5
+  path: very_long_file.txt
